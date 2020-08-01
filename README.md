@@ -1,2 +1,11 @@
-# styleguide
-IAI Style Guide
+# IAI Style Guide
+
+This repository defines guidelines for members and collaborators of the [Information Access & Interaction group](https://iai.group) at the University of Stavanger.
+
+  * [Python style guide](python/)
+  * [Markdown style guide](markdown/)
+  * [Scientific writing style guide](writing/)
+
+The style guides in this project are licensed under the [CC-By 4.0 License](https://creativecommons.org/licenses/by/4.0/), which encourages you to share these documents.
+
+![CC-By 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)
