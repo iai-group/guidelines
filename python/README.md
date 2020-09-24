@@ -21,7 +21,7 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
 
 ## Amendments to the Google Python Style Guide
 
-  * Use single quotes everywhere, except docstrings.
+  * Use single quotes `'` (as opposed to `"`) everywhere, except docstrings.
 
 ## IDE
 
