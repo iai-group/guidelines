@@ -9,7 +9,15 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
   * Use parentheses sparingly.
   * Naming: `module_name`, `package_name`, `ClassName`, `method_name`, `ExceptionName`, `function_name`, `GLOBAL_CONSTANT_NAME`, `global_var_name`, `instance_var_name`, `function_parameter_name`, `local_var_name`
     - Avoid dashes (`-`) in any package/module name.
-
+  * [Google-style docstrings](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings):
+    - Summary line, blank line, followed by the rest of the docstring.
+    - All sentences must be terminated by a period, question mark, or exclamation point.
+    - The docstring should be descriptive-style ("Fetches rows from a Bigtable.") rather than imperative-style ("Fetch rows from a Bigtable.").
+    - Use `Args:`, `Returns:`, and `Raises:` for documenting functions.
+  * Comments:
+    - Either before the operation or on the same line.
+      - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
+    - Comments should be as readable as narrative text, with proper capitalization and punctuation.
 
 ## Amendments to the Google Python Style Guide
 
