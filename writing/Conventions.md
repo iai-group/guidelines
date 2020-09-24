@@ -35,7 +35,7 @@
 
   * Use the [serial comma](http://en.wikipedia.org/wiki/Serial_comma); e.g., `one, two, and three` `I want no ifs, ands, or buts`
   * If a quote is followed by a dot or comma, the dot or comma should be put inside the quote
-    - `one example`. => `one example.`
+    - `'one example'`. => `'one example.'`
   * Footnotes should immediately follow the punctuation (no space between).
     - `This is a sentence.\footnote{...}`
   * Always put a comma after e.g. and i.e. E.g., `In this case, e.g., ...`
@@ -45,7 +45,7 @@
 ## Formatting
 
   * Section numbering should be max three levels deep.
-  * For sections and subsections use `Sect.~\ref{sec:xxx}``.  For subsubsections, use `\S\ref{sec:xxx}` instead of `Sect.X.Y.Z`.
+  * For sections and subsections use `Sect.~\ref{sec:xxx}`.  For subsubsections, use `\S\ref{sec:xxx}` instead of `Sect.X.Y.Z`.
   * Figures
     - `[h]` positioning should be avoided. All figures and tables should float to top.
   * URLs in footnotes: `\footnote{\url{http://xxx.xx.xx}}`
