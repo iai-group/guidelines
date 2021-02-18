@@ -23,11 +23,11 @@
   * Example
   ```
   @inproceedings{Zhang:2020:ECR,
-	  author = {Zhang, Shuo and Balog, Krisztian},
-	  title = {Evaluating Conversational Recommender Systems via User Simulation},
-	  booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+    author = {Zhang, Shuo and Balog, Krisztian},
+    title = {Evaluating Conversational Recommender Systems via User Simulation},
+    booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
     series = {KDD '20},
-	  pages = {1512--1520},
+    pages = {1512--1520},
     year = {2020}
   }
   ```
