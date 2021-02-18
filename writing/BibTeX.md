@@ -50,9 +50,9 @@
     title = {Test Collection Based Evaluation of Information Retrieval Systems},
     journal = {Found. Trends Inf. Retr.},
     volume = {4},
-	  number = {4},
-	  pages = {247--375},
-	  year = {2010}
+    number = {4},
+    pages = {247--375},
+    year = {2010}
   }
   ```
 
@@ -114,10 +114,10 @@
   * Example
   ```
   @phdthesis{Maxwell:2019:MSS,
-  	author = {Maxwell, David Martin},
+    author = {Maxwell, David Martin},
     title = {Modelling search and stopping in interactive information retrieval},
-  	school = {University of Glasgow},
-  	year = {2019}
+    school = {University of Glasgow},
+    year = {2019}
   }  
   ```
 
