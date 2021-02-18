@@ -14,7 +14,7 @@
 
 ## Formatting
 
-  * Quotes: use \`\` and \'\' instead of \' and \' for nicer rendering
+  * Quotes: use \`\` and \'\' instead of \' and \' for nicer rendering (```Example''`)
   * Use `\emph` for emphasizing text (not `\textit`!)
   * URLs in footnotes: `\footnote{\url{http://xxx.xx.xx}}`
   * Do not indent paragraphs after item lists and equations. This can be achieved by either using `%` (as opposed to an empty line) as separator or explicitly adding `\noindent`.
