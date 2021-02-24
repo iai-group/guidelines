@@ -5,6 +5,10 @@
   * README files are to be named all-caps `README.md`.
   * Other files names are capitalized (i.e., first letter of a word in uppercase, and the rest of the letters in lowercase) and `_` -separated (e.g., `Writing_style.md`).
 
+## Spacing
+
+  * There should be an empty line before and after headers.
+
 ## Markup
 
   * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. E.g.,
