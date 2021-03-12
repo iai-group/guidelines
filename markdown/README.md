@@ -11,7 +11,8 @@
 
 ## Markup
 
-  * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. E.g.,
+  * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. 
+  * Indent items with 2 spaces.
 
 ```
   * List item 1
