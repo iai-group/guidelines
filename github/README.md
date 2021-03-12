@@ -35,7 +35,7 @@ For papers, we follow the [Feature Branch Workflow](https://www.atlassian.com/gi
 
 ### Post acceptance
 
-Release the resources using the `template-paper-release` template (*TODO*).
+Release the resources using the [IAI paper release template](https://github.com/iai-group/template-paper-release).
 
 ## Projects
 
