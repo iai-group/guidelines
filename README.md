@@ -5,6 +5,7 @@ This repository defines guidelines for members and collaborators of the [Informa
 
   * [Python style guide](python/)
   * [Markdown style guide](markdown/)
+  * [GitHub workflows](github/)
   * [Scientific writing style guide](writing/)
   * [Data](data/)
 
