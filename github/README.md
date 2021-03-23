@@ -24,8 +24,9 @@ For papers, we follow the [Feature Branch Workflow](https://www.atlassian.com/gi
     git checkout master
     git fetch origin
     git reset --hard origin/master
-    git checkout -b #27-adding-term-weighting
+    git checkout -b issue#27-adding-term-weighting
     ```
+[comment]: <> (Note git checkout -b doesn't accept # in the branch name! that works only with gitflow. I suggest changing it to issue#27-adding-term-weighting)
   * Commit changes; last commit should contain "closing #issue_number".
   * Ask for a code review
     - See [Code review best practices](https://google.github.io/eng-practices/review/).
