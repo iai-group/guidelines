@@ -20,6 +20,15 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
     - Either before the operation or on the same line.
       - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
     - Comments should be as readable as narrative text, with proper capitalization and punctuation.
+  * Imports:
+    - Always at the top of the file, just after any module comments and docstrings and before module globals and constants.
+    - Imports should be grouped from most generic to least generic:
+      - Standard library imports.
+      - Related third party imports.
+      - Local application/library specific imports.
+      - A blank line between each group of imports.
+      - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
+    - Avoid relative imports, always use the full package name.
 
 ## Amendments to the Google Python Style Guide
 
