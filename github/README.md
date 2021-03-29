@@ -13,6 +13,7 @@ We use git, and more specifically GitHub, for collaborative work on papers and p
     - `short_title` is a 3-10 character long title.
     - For example: `kdd2020-usersim` or `emnlp2021-kgqa`.
   * Add your collaborators.
+  * See pre-commit hook configuration down below.
 
 ### Workflow
 
@@ -40,3 +41,21 @@ Release the resources using the [IAI paper release template](https://github.com/
 ## Projects
 
 For projects, one may choose between the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) and [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).  The latter makes sense for larger projects where periodic feature releases are planned.
+
+## Pre-commit hooks
+
+We use [pre-commit](https://pre-commit.com/).  Once installing it (using `pip install pre-commit`), add the following `.pre-commit-config.yaml` in your repository (*TODO: make it default in the template repo*).
+
+```
+repos:
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.6
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    - id: flake8
+
+```

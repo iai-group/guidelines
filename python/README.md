@@ -2,7 +2,15 @@
 
 Keep in mind that **сode is read more often than it is written**.
 
-We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html). This document highlights a number of peculiarities to pay special attention to, as well as complements the Google style guide on issues not specified there.
+We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html). This document highlights a number of peculiarities to pay special attention to, and potentially complements the Google style guide on issues not specified there.
+
+*TODO(Ivica) Blurb on using virtual environments.* Unless stated otherwise, we assume Python 3.6+.
+
+We use an auto-formatter (specifically, [Black](https://github.com/psf/black)) to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.
+
+*TODO(Krisztian): Paragraph on linting."
+
+You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/) as IDE. A [free educational license](https://www.jetbrains.com/community/education/) is available for both students and educators.  However, any other IDE may be used as long as it is configured accordingly.
 
 ## Highlighted from the Google Python Style Guide
 
@@ -30,15 +38,37 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
       - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
     - Avoid relative imports, always use the full package name.
 
-## Amendments to the Google Python Style Guide
+## Virtual environments
 
-  * Use single quotes `'` (as opposed to `"`) everywhere, except docstrings.
+*TODO(Ivica)*
 
-## IDE
+## Automatic formatting using Black
 
-You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/) as IDE. A [free educational license](https://www.jetbrains.com/community/education/) is available for both students and educators.  However, any other IDE may be used as long as it is configured according to the settings below.
+The main incentive for using Black is to avoid having to think about many configuration options. Black reformats entire files in place.
 
-### IDE Configuration
+  * Install Black using `pip install black`.
+  * Have the following block in the `pyproject.toml` file in the repo root:
+    ```
+    [tool.black]
+    line-length = 80
+    target-version = ['py37']
+    ```
+  * See PyCharm configuration below.
 
-  * Set maximum line length to 80 characters.
-  * Use spaces (instead of tabs) for indentation.
+## Linting
+
+*TODO: Linting is the automatic process of checking for programmatic and stylistic errors.*
+
+
+## PyCharm configuration (one-time)
+
+  * Black
+    - Add as an external tool
+      - Preferences / External tools / Add (+)
+      - Program: path to black (e.g., `/opt/anaconda3/bin/black`)
+      - Arguments: `$FilePath`
+      - Working directory: `$ProjectFileDir`
+    - Overwrite PyCharm's default Reformat Code shortcut with Black
+      - Preferences / Keymap
+      - Remove "&#8997; &#8984; L" from "Reformat Code"
+      - Add "&#8997; &#8984; L" to "External tools/Black"
