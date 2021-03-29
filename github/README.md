@@ -20,7 +20,7 @@ We use git, and more specifically GitHub, for collaborative work on papers and p
 For papers, we follow the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), where a separate branch is created for each new feature.
 
   * Create an issue for the feature/writing TODO.
-  * Create a feature branch off the latest state of the project, i.e., the master branch.  Name the branch using the `feature/#[issue_no]-[description]` pattern, e.g., `#27-adding-term-weighting`:
+  * Create a feature branch off the latest state of the project, i.e., the master branch.  Name the branch using the `feature/#[issue_no]-[description]` pattern, e.g., `feature/#27-adding-term-weighting`:
     ```
     git checkout master
     git fetch origin
@@ -28,11 +28,17 @@ For papers, we follow the [Feature Branch Workflow](https://www.atlassian.com/gi
     git checkout -b feature/#27-adding-term-weighting
     ```
   * Commit changes; last commit should contain "closing #issue_number".
+  * (Optionally) If you need to sync up your branch to master, you can do that by issuing:
+    ```
+    git checkout master
+    git pull
+    git checkout feature/#27-adding-term-weighting
+    git merge master
+    ```
   * Ask for a code review
     - See [Code review best practices](https://google.github.io/eng-practices/review/).
     - Iterate with the reviewer until all open issues are addressed and you get an LGTM from all reviewers.
-  * Merge changes into `master`.
-
+  * Merge changes into `master`.  
 
 ### Post acceptance
 
