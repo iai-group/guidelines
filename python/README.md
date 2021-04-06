@@ -42,6 +42,16 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
 
 *TODO(Ivica)*
 
+## Linting and code analysis using Flake8
+
+*TODO: Linting is the automatic process of checking for programmatic and stylistic errors.*
+
+We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code). Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.
+
+  * Install using `pip install flake8`.
+  * *TODO: See PyCharm configuration below.*
+
+
 ## Automatic formatting using Black
 
 The main incentive for using Black is to avoid having to think about many configuration options. Black reformats entire files in place.
@@ -55,13 +65,10 @@ The main incentive for using Black is to avoid having to think about many config
     ```
   * See PyCharm configuration below.
 
-## Linting
-
-*TODO: Linting is the automatic process of checking for programmatic and stylistic errors.*
-
-
 ## PyCharm configuration (one-time)
 
+  * Flake8
+    - *TODO*
   * Black
     - Add as an external tool
       - Preferences / External tools / Add (+)
