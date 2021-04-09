@@ -2,15 +2,16 @@
 
 Keep in mind that **сode is read more often than it is written**.
 
-We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html). This document highlights a number of peculiarities to pay special attention to, and potentially complements the Google style guide on issues not specified there.
+We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).  This document highlights a number of peculiarities to pay special attention to, and potentially complements the Google style guide on issues not specified there.
 
-*TODO(Ivica) Blurb on using virtual environments.* Unless stated otherwise, we assume Python 3.6+.
+**Unless stated otherwise, we assume Python 3.7.**
 
-We use an auto-formatter (specifically, [Black](https://github.com/psf/black)) to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.
+Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.
 
-*TODO(Krisztian): Paragraph on linting."
+We also use an auto-formatter to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.  In particular, we use [Black](https://github.com/psf/black).  The main incentive for using Black is to avoid having to think about many configuration options.  Black reformats entire files in place.
 
 You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/) as IDE. A [free educational license](https://www.jetbrains.com/community/education/) is available for both students and educators.  However, any other IDE may be used as long as it is configured accordingly.
+
 
 ## Highlighted from the Google Python Style Guide
 
@@ -38,37 +39,100 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
       - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
     - Avoid relative imports, always use the full package name.
 
-## Virtual environments
 
-*TODO(Ivica)*
+## Repository set-up
 
-## Linting and code analysis using Flake8
+The following steps are to be performed when setting up a new code repository.
 
-*TODO: Linting is the automatic process of checking for programmatic and stylistic errors.*
+*TODO: Create an example repository that is already configured this way.*
 
-We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code). Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.
+### Requirements
 
-  * Install using `pip install flake8`.
-  * *TODO: See PyCharm configuration below.*
+Create a `requirements.txt` file which includes the following packages:
+```
+black
+flake8
+pre-commit
+pytest
+```
 
+### Flake8
 
-## Automatic formatting using Black
+   * Create a `.flake8` file in the repo root with the following default settings:
+     ```
+     [flake8]
+     max-line-length = 80
+     max-complexity = 10
+     exclude =
+         .git,
+         __pycache__
+     ```
 
-The main incentive for using Black is to avoid having to think about many configuration options. Black reformats entire files in place.
+### Black
 
-  * Install Black using `pip install black`.
   * Have the following block in the `pyproject.toml` file in the repo root:
     ```
     [tool.black]
     line-length = 80
     target-version = ['py37']
     ```
-  * See PyCharm configuration below.
+  * Include the Black badge in the repo README.md:
+    ```
+    [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+    ```
 
-## PyCharm configuration (one-time)
+### Pytest
+
+  * Create a blank `conftest.py` file.
+  * Create a folder called `tests` at the root of the repository and make it a module by creating a `__init__.py` file.
+  * Use the same module structure under `tests` as the source code, with files prefixed with `test_`.
+
+### Install pre-commit hooks
+
+  * This is to be done once all the requirements are (black, flake8, and pre-commit) are installed!
+  * Create a `.pre-commit-config.yaml` with the followings:
+    ```
+    repos:
+    -   repo: https://github.com/ambv/black
+        rev: 20.8b1
+        hooks:
+        - id: black
+          language_version: python3.7
+    -   repo: https://gitlab.com/pycqa/flake8
+        rev: 3.9.0
+        hooks:
+        - id: flake8
+    -   repo: local
+        hooks:
+        -   id: pytest
+            name: run tests
+            entry: pytest tests
+            language: system
+            always_run: true
+            pass_filenames: false
+    ```
+  * Execute `pre-commit install` to install pre-commit hooks (which are defined in `.pre-commit-config.yaml`).
+
+
+## Local development configuration
+
+### Virtual environments
+
+*TODO(Ivica)*
+
+### Packages
+
+Make sure the packages `black`, `flake8`, `pre-commit`, and `pytest` are installed.
+Normally, these should be in the repository's requirements.txt file and can be installed using `pip install -r requirements.txt`.
+
+### PyCharm configuration (one-time)
 
   * Flake8
-    - *TODO*
+    - Preferences / External tools / Add (+)
+    - Program: path to black (e.g., `/opt/anaconda3/bin/flake8`)
+    - Arguments: `$FilePath$`
+    - Working directory: `$ProjectFileDir$`
+    - Setting up Flake8 issue highlighting is explained in a [separate document](PyCharm_Flake8.md)
   * Black
     - Add as an external tool
       - Preferences / External tools / Add (+)

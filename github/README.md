@@ -50,18 +50,4 @@ For projects, one may choose between the [Feature Branch Workflow](https://www.a
 
 ## Pre-commit hooks
 
-We use [pre-commit](https://pre-commit.com/).  Once installing it (using `pip install pre-commit`), add the following `.pre-commit-config.yaml` in your repository (*TODO: make it default in the template repo*).
-
-```
-repos:
--   repo: https://github.com/ambv/black
-    rev: stable
-    hooks:
-    - id: black
-      language_version: python3.6
--   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.7.9
-    hooks:
-    - id: flake8
-
-```
+See the [the section on pre-commit hooks under the Python style guide]().
