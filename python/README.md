@@ -86,6 +86,7 @@ pytest
   * Create a blank `conftest.py` file.
   * Create a folder called `tests` at the root of the repository and make it a module by creating a `__init__.py` file.
   * Use the same module structure under `tests` as the source code, with files prefixed with `test_`.
+  * If you need to run the tests explicitly without needing to commit run `pytest tests -vv` use `-vv` to make it verbose.
 
 ### Install pre-commit hooks
 
@@ -106,12 +107,14 @@ pytest
         hooks:
         -   id: pytest
             name: run tests
-            entry: pytest tests
+            entry: pytest tests -vv
             language: system
             always_run: true
             pass_filenames: false
     ```
   * Execute `pre-commit install` to install pre-commit hooks (which are defined in `.pre-commit-config.yaml`).
+  * If the pytest when running as pre-commit hook fails even though all tests pass make sure there are no modified files left unstaged.
+  * If Black fails with reformatted files and adding reformatted files to staging area still doesn't fix it, then run the `black file_name.py` explicitly and then add that file so the staging area and commit again.
 
 
 ## Local development configuration
