@@ -1,0 +1,14 @@
+{
+	"fizz": {
+		"0": "buzz",
+		"1": "bubble",
+		"2": "bzzzt",
+                "3": "brass",
+                "4": "borscht"
+	},
+	"buzz": {
+		"0": "fizz",
+		"1": "frappuccino",
+		"2": "frazzle"
+	}
+}

@@ -8,52 +8,100 @@ line interface (CLI).
 
     Typical usage example in shell CLI:
 
-    python example_script.py -in ../foo/input.txt -out ../bar/output.txt
+    python example_script.py -i input.txt -o output.txt -m buzzfizz.json
+
+    Or simply:
+
+    python example_script.py -i input.txt -o output.txt
 
 :Author: Trond Linjordet
 """
 
 import argparse
+import json
 
-def dummy_line_modification(line, i):
+
+def dummy_line_modification(line: str, i: int, mods: dict) -> str:
     """Defines the modification to be perfomed for a single input line.
 
     Args:
-        line: A string.
-        i: An integer.
+        line: The line from the input file to be modified.
+        i: The line number where the line argument was read.
+        mods:
     Returns:
         Modified form of the input line.
     """
-    return line.rstrip('\n')+'Added dummy modification '+str(i)+'.\n'
+    output_line = line.rstrip("\n") + " \t | "
+    if not mods == dict():
+        if i % 3 == 0 and i % 5 == 0:
+            output_line += str(mods["fizz"][str(i % 5)]) \
+                           + str(mods["buzz"][str(i % 3)])
+        elif i % 3 == 0:
+            output_line += str(mods["fizz"][str(i % 5)])
+        elif i % 5 == 0:
+            output_line += str(mods["buzz"][str(i % 3)])
+    else:
+        output_line += "Added standard modification " + str(i) + "."
+    return output_line + "\n"
 
 
-def dummy_function(input_path, output_path):
+def dummy_function(input_path: str, output_path: str, mod_path=None):
     """Takes input from a file, modifies each line, and writes output
     accordingly, line by line.
 
     Args:
         input_path: A file path to an existing file.
         output_path: A file path to a non-existent file.
+        mod_path: A file path to a JSON file with a dictionary to modify lines.
     """
-    with open(input_path, 'r', encoding='utf8') as f_in, \
-            open(output_path, 'w', encoding='utf8') as f_out:
-        for i, line in enumerate(f_in):
-            f_out.write(dummy_line_modification(line, i))
+    if mod_path is not None:
+        assert isinstance(mod_path, str)
+        assert mod_path[-5:] == ".json"
+        with open(mod_path) as json_file:
+            mods = json.load(json_file)
+    else:
+        mods = dict()
 
-if __name__ == '__main__':
+    with open(input_path, "r", encoding="utf8") as f_in, open(
+        output_path, "w", encoding="utf8"
+    ) as f_out:
+        for i, line in enumerate(f_in):
+            f_out.write(dummy_line_modification(line, i, mods))
+
+
+if __name__ == "__main__":
     # Parse required (or expected) arguments passed from command-line call.
     parser = argparse.ArgumentParser()
-    requiredNamed = parser.add_argument_group('Required named arguments')
-    requiredNamed.add_argument('-in', '--input_path', dest='input_path',
-                               help='short explanation, input',
-                               default='../foo/input.txt',
-                               required=True)
-    requiredNamed.add_argument('-out', '--output_path', dest='output_path',
-                               help='short explanation, output',
-                               required=True)
+    required_named = parser.add_argument_group("Required named arguments")
+    required_named.add_argument(
+        "-i",
+        "--input_path",
+        dest="input_path",
+        help="short explanation, input",
+        default="input.txt",
+        required=True,
+    )
+    required_named.add_argument(
+        "-o",
+        "--output_path",
+        dest="output_path",
+        help="short explanation, output",
+        default="output.txt",
+        required=True,
+    )
+    optional_named = parser.add_argument_group("Optional named arguments")
+    optional_named.add_argument(
+        "-m",
+        "--modification_path",
+        dest="mod_path",
+        help="short explanation, modifiying file",
+        default=None,
+        required=False,
+    )
     args = parser.parse_args()
     input_path = args.input_path
     output_path = args.output_path
+    mod_path = args.mod_path
 
     # Execute script given parsed arguments.
-    dummy_function(input_path, output_path)
+    dummy_function(input_path, output_path, mod_path)
