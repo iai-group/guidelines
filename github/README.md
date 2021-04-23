@@ -27,7 +27,9 @@ For papers, we follow the [Feature Branch Workflow](https://www.atlassian.com/gi
     git reset --hard origin/master
     git checkout -b feature/#27-adding-term-weighting
     ```
-  * Commit changes; last commit should contain "closing #issue_number".
+  * Commit changes
+    - Follow the [guide for commit messages](Git_commit.md).
+    - Last commit should contain "Closes #issue_number".
   * (Optionally) If you need to sync up your branch to master, you can do that by issuing:
     ```
     git checkout master
