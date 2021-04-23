@@ -39,6 +39,10 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
       - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
     - Avoid relative imports, always use the full package name.
 
+## Amendments to the Google style guide
+
+  * Always use double quotes `"` (because of Black)
+  * Use [f-strings](https://www.python.org/dev/peps/pep-0498/) for string formatting
 
 ## Repository set-up
 
@@ -63,10 +67,12 @@ pytest
      [flake8]
      max-line-length = 80
      max-complexity = 10
+     ignore = E203, W503
      exclude =
          .git,
          __pycache__
      ```
+   * Note that some warnings need to be ignored because of conflicting formatting by Black.
 
 ### Black
 
