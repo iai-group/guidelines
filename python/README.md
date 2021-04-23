@@ -132,45 +132,46 @@ pytest
   * After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
 
   * If we already know some of the libraries we want to include, we can simply append those to the end:
-```
-conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
-```
-To add more libraries after we already created and activated the environment:
-```
-conda install jupyter -y
-```
-The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
+    ```
+    conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
+    ```
+  * To add more libraries after we already created and activated the environment:
+    ```
+    conda install jupyter -y
+    ```
+      - The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
   * Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
-```
-conda env create -n myenv --file environment.yaml
-```
+    ```
+    conda env create -n myenv --file environment.yaml
+    ```
 
-Example file structure:
-```
-channels:
-  - PyPi
-  - conda-forge
-  - defaults
-dependencies:
-  - python
-  - pip
-  - pre-commit
-  - flake8
-  - pytest
-  - black
-```
+    Example file structure:
+    ```
+    channels:
+      - PyPi
+      - conda-forge
+      - defaults
+    dependencies:
+      - python
+      - pip
+      - pre-commit
+      - flake8
+      - pytest
+      - black
+    ```
 
   * To export all dependencies to a cross platform `environment.yaml` file:
-```
-conda env export --from-history > environment.yaml
-```
-Here, `--from-history` only includes dependencies specified by the user, omitting this will include all present dependencies. Note that you might want to remove `name` and `prefix` from the created file.
+    ```
+    conda env export --from-history > environment.yaml
+    ```
+    - Here, `--from-history` only includes dependencies specified by the user, omitting this will include all present dependencies. Note that you might want to remove `name` and `prefix` from the created file.
+    - Using `--no-builds` will remove specific version numbers.
 
   * To remove an environment first deactivate and then:
-```
-conda env remove -n myenv
-```
+    ```
+    conda env remove -n myenv
+    ```
 
   * More information about [Anaconda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
