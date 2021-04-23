@@ -49,7 +49,7 @@ The subject should be
 
 It's helpful to think that the subject should complete the sentence
 
-  * If applied, this commit will *your subject line here*
+  * If applied, this commit will [*your subject line here*].
 
 ### Body
 
