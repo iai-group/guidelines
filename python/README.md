@@ -127,22 +127,21 @@ pytest
 
 ### Virtual environments with anaconda
 
- - Simplest way to start using virtual environments in anaconda is with command `conda create --name myenv` where `myenv` is the name of the environment we want to create.
+  * Simplest way to start using virtual environments in anaconda is with command `conda create --name myenv` where `myenv` is the name of the environment we want to create.
 
- - After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
+  * After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
 
-
- - If we already know some of the libraries we want to include, we can simply append those to the end:
+  * If we already know some of the libraries we want to include, we can simply append those to the end:
 ```
 conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
 ```
-To add more libraries after we already created the environment:
+To add more libraries after we already created and activated the environment:
 ```
 conda install jupyter -y
 ```
 The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
- - Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
+  * Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
 ```
 conda env create -n myenv --file environment.yaml
 ```
@@ -162,18 +161,18 @@ dependencies:
   - black
 ```
 
- - To export all dependencies to a cross platform `environment.yaml` file:
+  * To export all dependencies to a cross platform `environment.yaml` file:
 ```
 conda env export --from-history > environment.yaml
 ```
 Here, `--from-history` only includes dependencies specified by the user, omitting this will include all present dependencies. Note that you might want to remove `name` and `prefix` from the created file.
 
- - To remove an environment first deactivate and then:
+  * To remove an environment first deactivate and then:
 ```
 conda env remove -n myenv
 ```
 
- - More information about [anaconda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+  * More information about [Anaconda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ### Packages
 
