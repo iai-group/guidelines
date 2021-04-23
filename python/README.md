@@ -130,6 +130,11 @@ pytest
 ```
 conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
 ```
+To add more libraries after we already created the environment:
+```
+conda install jupyter -y
+```
+The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
  - Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
 ```
