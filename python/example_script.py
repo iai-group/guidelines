@@ -14,28 +14,28 @@ line interface (CLI).
 
     python example_script.py -i input.txt -o output.txt
 
-:Author: Trond Linjordet
 """
 
 import argparse
 import json
+import typing
 
 
-def dummy_line_modification(line: str, i: int, mods: dict) -> str:
+def dummy_line_modification(line: str, i: int, mods: typing.Dict[str, dict]) -> str:
     """Defines the modification to be perfomed for a single input line.
 
     Args:
         line: The line from the input file to be modified.
         i: The line number where the line argument was read.
-        mods:
+        mods: Substitution mapping to modify line based on line number.
+
     Returns:
         Modified form of the input line.
     """
     output_line = line.rstrip("\n") + " \t | "
     if not mods == dict():
         if i % 3 == 0 and i % 5 == 0:
-            output_line += str(mods["fizz"][str(i % 5)]) \
-                           + str(mods["buzz"][str(i % 3)])
+            output_line += str(mods["fizz"][str(i % 5)]) + str(mods["buzz"][str(i % 3)])
         elif i % 3 == 0:
             output_line += str(mods["fizz"][str(i % 5)])
         elif i % 5 == 0:
@@ -45,7 +45,7 @@ def dummy_line_modification(line: str, i: int, mods: dict) -> str:
     return output_line + "\n"
 
 
-def dummy_function(input_path: str, output_path: str, mod_path=None):
+def dummy_function(input_path: str, output_path: str, mod_path: str = None):
     """Takes input from a file, modifies each line, and writes output
     accordingly, line by line.
 
@@ -72,8 +72,8 @@ def dummy_function(input_path: str, output_path: str, mod_path=None):
 if __name__ == "__main__":
     # Parse required (or expected) arguments passed from command-line call.
     parser = argparse.ArgumentParser()
-    required_named = parser.add_argument_group("Required named arguments")
-    required_named.add_argument(
+    named = parser.add_argument_group("Named arguments")
+    named.add_argument(
         "-i",
         "--input_path",
         dest="input_path",
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         default="input.txt",
         required=True,
     )
-    required_named.add_argument(
+    named.add_argument(
         "-o",
         "--output_path",
         dest="output_path",
@@ -89,8 +89,7 @@ if __name__ == "__main__":
         default="output.txt",
         required=True,
     )
-    optional_named = parser.add_argument_group("Optional named arguments")
-    optional_named.add_argument(
+    named.add_argument(
         "-m",
         "--modification_path",
         dest="mod_path",
@@ -99,9 +98,6 @@ if __name__ == "__main__":
         required=False,
     )
     args = parser.parse_args()
-    input_path = args.input_path
-    output_path = args.output_path
-    mod_path = args.mod_path
 
     # Execute script given parsed arguments.
-    dummy_function(input_path, output_path, mod_path)
+    dummy_function(args.input_path, args.output_path, args.mod_path)
