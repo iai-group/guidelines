@@ -119,9 +119,50 @@ pytest
 
 ## Local development configuration
 
-### Virtual environments
+### Virtual environments with anaconda
 
-*TODO(Ivica)*
+ - Simplest way to start using virtual environments in anaconda is with command `conda create --name myenv` where `myenv` is the name of the environment we want to create.
+
+ - After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
+
+
+ - If we already know some of the libraries we want to include, we can simply append those to the end:
+```
+conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
+```
+
+ - Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
+```
+conda env create -n myenv --file environment.yaml
+```
+
+Example file structure:
+```
+channels:
+  - PyPi
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - pre-commit
+  - flake8
+  - pytest
+  - black
+```
+
+ - To export all dependencies to a cross platform `environment.yaml` file:
+```
+conda env export --from-history > environment.yaml
+```
+Here, `--from-history` only includes dependencies specified by the user, omitting this will include all present dependencies. Note that you might want to remove `name` and `prefix` from the created file.
+
+ - To remove an environment first deactivate and then:
+```
+conda env remove -n myenv
+```
+
+ - More information about [anaconda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ### Packages
 
