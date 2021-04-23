@@ -47,27 +47,58 @@ The subject should be
   * written with no terminating period, and
   * the subject should be written in the *imperative mood*.
 
-## Writing style conventions
+It's helpful to think that the subject should complete the sentence
 
-  * Write complete and grammatical sentences in English, with regular punctuation, e.g, finishing with a period. 
-  * Use imperative tense, to tersely convey the purpose of the change. 
-      * For example, "Defibrilate the crustacean Jazz mountain, recursively."
-  * Use GitHub flavored markdown syntax where needed. 
+  * If applied, this commit will *your subject line here*
 
-## Spacing
+### Body
 
-  * There should be an empty line before and after headers.
+If you need more than one 50 character line to explain your change, write a body under the subject in the commit message.
 
-## Markup
+The body should be
+  * separated from the subject by one blank line,
+  * (manually) wrapped at 72 characters, and
+  * an explanation of why and what was changed, not how it works. 
 
-  * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. 
-  * Indent items with 2 spaces.
+### Issue tracking
+
+Put references to repository issues at the bottom of the body, as in the example.
+
+## Example
+
+This example is taken directly from the [blog post](https://chris.beams.io/posts/git-commit/).
 
 ```
-  * List item 1
-  * List item 2
-    - Sub item 21
-      - Sub item 211
-    - Sub item 22
-  * List item 3
+Summarize changes in around 50 characters or less
+
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like `log`, `shortlog`
+and `rebase` can get confused if you run the two together.
+
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequences of this
+change? Here's the place to explain them.
+
+Further paragraphs come after blank lines.
+
+ - Bullet points are okay, too
+
+ - Typically a hyphen or asterisk is used for the bullet, preceded
+   by a single space, with blank lines in between, but conventions
+   vary here
+
+If you use an issue tracker, put references to them at the bottom,
+like this:
+
+Resolves: #123
+See also: #456, #789
 ```
+
+
+## What's the use?
+
+You can look at the commit messages later, e.g. by the command `git log`. 
