@@ -25,6 +25,7 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
     - All sentences must be terminated by a period, question mark, or exclamation point.
     - The docstring should be descriptive-style ("Fetches rows from a Bigtable.") rather than imperative-style ("Fetch rows from a Bigtable.").
     - Use `Args:`, `Returns:`, and `Raises:` for documenting functions.
+    - **(IAI)** The class constructor should be documented in the docstring for its `__init__` method.  The class docstring is omitted.
   * Comments:
     - Either before the operation or on the same line.
       - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
