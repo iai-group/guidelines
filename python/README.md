@@ -20,12 +20,12 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
   * Use parentheses sparingly.
   * Naming: `module_name`, `package_name`, `ClassName`, `method_name`, `ExceptionName`, `function_name`, `GLOBAL_CONSTANT_NAME`, `global_var_name`, `instance_var_name`, `function_parameter_name`, `local_var_name`
     - Avoid dashes (`-`) in any package/module name.
+    - Use single underscore for private/protected methods/variables (avoid "dunder"-s).
   * [Google-style docstrings](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings):
     - Summary line, blank line, followed by the rest of the docstring.
     - All sentences must be terminated by a period, question mark, or exclamation point.
     - The docstring should be descriptive-style ("Fetches rows from a Bigtable.") rather than imperative-style ("Fetch rows from a Bigtable.").
     - Use `Args:`, `Returns:`, and `Raises:` for documenting functions.
-    - **(IAI)** The class constructor should be documented in the docstring for its `__init__` method.  The class docstring is omitted.
   * Comments:
     - Either before the operation or on the same line.
       - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
@@ -42,7 +42,9 @@ You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/)
 
 ## Amendments to the Google style guide
 
-  * Always use double quotes `"` (because of Black)
+  * Docstrings
+    - The class constructor should be documented in the docstring for its `__init__` method.  The class docstring is omitted.
+  * Always use double quotes `"` (but if you have Black configured, it should enforce those automatically)
   * Use [f-strings](https://www.python.org/dev/peps/pep-0498/) for string formatting
 
 ## Repository set-up

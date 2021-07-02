@@ -94,7 +94,7 @@ Further paragraphs come after blank lines.
 If you use an issue tracker, put references to them at the bottom,
 like this:
 
-Resolves: #123
+Closes: #123
 See also: #456, #789
 ```
 
@@ -102,3 +102,9 @@ See also: #456, #789
 ## What's the use?
 
 You can look at the commit messages later, e.g. by the command `git log`. 
+
+
+## Pull requests
+
+Pull requests should be named similarly to commit subjects.
+If they close an issue that should be mentioned in the description.
