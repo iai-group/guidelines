@@ -1,6 +1,7 @@
 # GitHub
 
 We use git, and more specifically GitHub, for collaborative work on papers and projects.
+
 [Following GitHub](https://github.com/github/renaming), we use `main` as the default branch (as opposed to `master`).
 
 ## Papers
