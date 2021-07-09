@@ -83,6 +83,7 @@ class DummyThing:
         self._color = color
         self._weight = weight
 
+    @property
     def weight(self) -> float:
         """Methods can be defined that reveal private variables.
 
