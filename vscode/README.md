@@ -79,7 +79,7 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 
  ```JSON
 {
-    "autoDocstring.customTemplatePath": "/Users/Ivica/Repos/.config/google.mustache",
+    "autoDocstring.customTemplatePath": "path/to/file/google.mustache",
 }
  ```
 
