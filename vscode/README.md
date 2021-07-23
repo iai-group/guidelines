@@ -75,6 +75,13 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 **Python Docstring Generator**
 
  - To Generate docstrings use shortcut `Shift+Cmd+2` or type `"""` and choose `Generate Docstring` intelliSense suggestion.
+ - Download the docstring [template](./resources/google.mustache) and add the following line to `settings.json`
+
+ ```JSON
+{
+    "autoDocstring.customTemplatePath": "/Users/Ivica/Repos/.config/google.mustache",
+}
+ ```
 
 **Python Test Explorer**
 
