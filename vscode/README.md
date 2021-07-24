@@ -37,17 +37,15 @@ For example, if we want to access the JSON version of settings we simply type `s
 
 ### Extensions
 
-The strength and flexibility of VSCode are in the use of extensions. These are add-ons that unlock more features. The following are three lists of extensions; *Required*, *Recommended*, and *Suggested*. There are many more useful extensions not covered in this document.
+The strength and flexibility of VSCode are in the use of extensions. These are add-ons that unlock more features. The following are three lists of extensions; *Expected for IAI projects* and *Recommended*. There are many other useful extensions not covered in this document.
 
-**Required**
+#### Expected for IAI projects
  - Python
+ - Python Docstring Generator with custom template installed (see below).
 
-**Recommended**
- - Python Docstring Generator
+#### Recommended
  - Python Test Explorer
  - Remote - SSH
-
-**Suggested**
  - GitHub Pull Requests and Issues
  - GitLens
  - Latex Workshop
@@ -58,7 +56,7 @@ The strength and flexibility of VSCode are in the use of extensions. These are a
 
 Settings can be configured using UI or modifying the settings (JSON) file. Here we show the latter. 
 
-**General and python extension**
+#### General and Python extension
 
 ```JSON
 {
@@ -72,7 +70,7 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 
  - To use lining and formatting in python files using `black` and `flake8` select the python environment which has those libraries installed. The selected interpreter is shown on the left side of the *Status Bar* and changing it can be done either by clicking on it or via *Command Palette*.
 
-**Python Docstring Generator**
+#### Python Docstring Generator
 
  - To Generate docstrings use shortcut `Shift+Cmd+2` or type `"""` and choose `Generate Docstring` intelliSense suggestion.
  - Download the docstring [template](./resources/google.mustache) and add the following line to `settings.json`
@@ -83,7 +81,7 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 }
  ```
 
-**Python Test Explorer**
+#### Python Test Explorer
 
 ```JSON
 {
@@ -93,6 +91,6 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 
  - Python test explorer is accessed by clicking on the beaker in the Activity Bar.
 
-**Remote - SSH**
+#### Remote - SSH
 
  - To connect to a remote workstation via SSH click on the green icon in the bottom left corner of Status Bar and choose `Connect to Host` in *Command Palette*. At this point, you can either select configured SSH host from `~/.ssh/config` or enter `user@host`.
