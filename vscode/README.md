@@ -94,3 +94,37 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 #### Remote - SSH
 
  - To connect to a remote workstation via SSH click on the green icon in the bottom left corner of Status Bar and choose `Connect to Host` in *Command Palette*. At this point, you can either select configured SSH host from `~/.ssh/config` or enter `user@host`.
+
+#### GitHub Pull Requests and Issues
+
+
+```JSON
+{
+    "githubIssues.queries": [
+        {
+            "label": "My Pressing Issues",
+            "query": "state:open repo:${owner}/${repository} assignee:${user} label:P0"
+        },
+        {
+            "label": "My Issues",
+            "query": "state:open repo:${owner}/${repository} assignee:${user} -label:P0"
+        },
+        {
+            "label": "Other Pressing Issues",
+            "query": "state:open repo:${owner}/${repository} -assignee:${user} label:P0"
+        },
+        {
+            "label": "Other Open Issues",
+            "query": "state:open repo:${owner}/${repository} -assignee:${user} -label:P0"
+        }
+    ],
+    "githubIssues.issueBranchTitle": "feature/#${issueNumber}",
+    "githubPullRequests.defaultMergeMethod": "squash",
+}
+```
+
+ - The issue manager should look similar to:
+
+ ![IssueMAnager](./figures/issue_manager.png)
+
+ - From here we can click on the arrow to create and check out a new branch associated with the issue.
