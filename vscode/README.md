@@ -118,7 +118,8 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
             "query": "state:open repo:${owner}/${repository} -assignee:${user} -label:P0"
         }
     ],
-    "githubIssues.issueBranchTitle": "feature/#${issueNumber}",
+    "githubIssues.issueBranchTitle": "feature/#${issueNumber}-${sanitizedIssueTitle}",
+    "githubIssues.useBranchForIssues": "prompt",
     "githubPullRequests.defaultMergeMethod": "squash",
 }
 ```
