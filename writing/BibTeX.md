@@ -22,7 +22,7 @@
   * Not to include: `publisher`, `address`, `abstract`, `keywords`, `doi`, `url`, etc.
   * Example
   ```
-  @inproceedings{Zhang:2020:ECR,
+  @inproceedings{Zhang:2020:KDD,
     author = {Zhang, Shuo and Balog, Krisztian},
     title = {Evaluating Conversational Recommender Systems via User Simulation},
     booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
@@ -31,6 +31,10 @@
     year = {2020}
   }
   ```
+  * TODO(KB) (to document)
+    - Multiple papers by same first author at the same year/conf (a, b, c, ...)
+    - Canonical conference acronyms (SIGIR, ECIR, PhDThesis, etc.)
+    - Booktitle field (use full title)
 
 ### Fields for journal papers
 
@@ -55,6 +59,8 @@
     year = {2010}
   }
   ```
+  * TODO(KB)
+    - Clarift journal field (use ISO short version --add link--, if available)
 
 ### Fields for arXiv papers
 
