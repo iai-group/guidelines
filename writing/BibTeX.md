@@ -3,7 +3,10 @@
 ## Bib entries
 
   * Keep all bib entries in a separate .bib file.
-  * **Keep the .bib file tidy**: it should contain **only papers that are actually referenced** in the current paper (not all your personal bibliography!) and **only with the required metadata fields**.
+  * **Keep the .bib file tidy**: 
+    - It should contain **only papers that are actually referenced** in the current paper (not all your personal bibliography)!
+    - Entries should have **only the required metadata fields**.
+    - Entries should be **ordered by Bib key**.
   * The ultimate source of BibTeX entries is the [ACM Digital Library](http://dl.acm.org/). If the paper cannot be found there, the same conventions should still be followed.
 
 ## BibTeX fields
