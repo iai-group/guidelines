@@ -75,6 +75,10 @@ The naming of paper files should follow the same naming conventions, except that
 
 ### Citing arXiv papers
 
+Depending on the paper style, arXiv papers may need different type and metadata fields.
+
+#### Preferred format (works for ACM)
+
   * Paper type is `misc`!
   * Fields to include:
     - `author`
@@ -93,6 +97,28 @@ The naming of paper files should follow the same naming conventions, except that
     eprint = {2001.06910},
     primaryClass = {cs.CL},
     year = {2020}
+  }
+  ```  
+
+### Less preferred format (needed for Springer)
+
+  * Paper type is `article`!
+  * Fields to include:
+    - `author`
+    - `title`
+    - `journal = {arXiv}`
+    - `volume = {cs.CL/PAPER_ID}`
+    - `year`
+  * Not to include: `eprint`, `primaryClass`, `url`
+  * Example
+  ```
+  @article{Balog:2020:arXiv,
+    author    = {Krisztian Balog and Lucie Flekova and Matthias Hagen and Rosie Jones and Martin Potthast and Filip Radlinski and Mark Sanderson and Svitlana Vakulenko and Hamed Zamani},
+    title     = {Common Conversational Community Prototype: Scholarly Conversational
+                Assistant},
+    journal   = {arXiv},
+    volume    = {cs.CL/2001.06910},
+    year      = {2020},
   }
   ```  
 
