@@ -100,7 +100,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
   }
   ```  
 
-### Less preferred format (needed for Springer)
+#### Less preferred format (needed for Springer)
 
   * Paper type is `article`!
   * Fields to include:
