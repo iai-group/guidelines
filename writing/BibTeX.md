@@ -8,11 +8,25 @@
 
 ## BibTeX fields
 
-  * **Bib keys**: `author:year:FTL`, where FTL are first three capital letters from the title. For example, `Balog:2012:ERL`, `Meij:2012:ASM`.
+### Bib keys
 
-### Fields for conference/workshop papers
+Bib keys must follow the `Author:year:VENUE` format, where
 
-  * To include:
+  * `Author` is the name of the first author (capitalized and with accents removed).
+  * In case the same first author has multiple publications in the given year at the same venue, they should be distinguished by adding an `a`, `b`, `c`, ... suffix to the year. E.g., `Smith:2010a:SIGIR`, `Smith:2010b:SIGIR`.
+  * Possible values for venue may be (with this exact capitalization):
+    - Conference paper: acronym (`AAAI`, `ACL`, `CIKM`, `ECIR`, `EMNLP`, `ICTIR`, `KDD`, `NeurIPS`, `SIGIR`, `TREC`, `WSDM`, `WWW`, etc.)
+    - Workshop paper: workshop acronym if a well-established series (`LDOW`) or corresponding conference acronym suffixed by `-ws` (`WWW-ws`); both options are acceptable and are left to the author's best judgment (and also to check whether a more suitable reference --e.g., conference or journal follow-up paper-- may be found).
+    - Journal article: acronym (`CS`, `FnTIR`, `IR`, `IRJ`, `TIST`, `TOIS`, `SIGIRForum`, etc.)
+    - arXiv paper: `arXiv`
+    - Book: `Book`
+    - PhD thesis: `PhDThesis`
+
+The naming of paper files should follow the same naming conventions, except that all fields are lowercased and dash is used as separator, i.e., `author-year-venue.pdf`, e.g., `smith-2020-sigir.pdf`.
+
+### Citing conference/workshop papers
+
+  * Fields to include:
     - `author`
     - `title`
     - `booktitle`
@@ -31,17 +45,13 @@
     year = {2020}
   }
   ```
-  * TODO(KB) (to document)
-    - Multiple papers by same first author at the same year/conf (a, b, c, ...)
-    - Canonical conference acronyms (SIGIR, ECIR, PhDThesis, etc.)
-    - Booktitle field (use full title)
 
-### Fields for journal papers
+### Citing journal papers
 
-  * To include:
+  * Fields to include:
     - `author`
     - `title`
-    - `journal` using ISO 4 abbreviation
+    - `journal` using [ISO 4 abbreviation](https://www.issn.org/services/online-services/access-to-the-ltwa/) wherever available
     - `volume`
     - `number`
     - `pages` (`xx--yy` that is, double dash)
@@ -49,7 +59,7 @@
   * Not to include: `publisher`, `address`, `abstract`, `keywords`, `doi`, `url`, etc.
   * Example
   ```
-  @article{Sanderson:2010:TCB,
+  @article{Sanderson:2010:FnTIR,
     author = {Sanderson, Mark},
     title = {Test Collection Based Evaluation of Information Retrieval Systems},
     journal = {Found. Trends Inf. Retr.},
@@ -59,36 +69,33 @@
     year = {2010}
   }
   ```
-  * TODO(KB)
-    - Clarift journal field (use ISO short version --add link--, if available)
 
-### Fields for arXiv papers
+### Citing arXiv papers
 
-  * To include:
+  * Paper type is `misc`!
+  * Fields to include:
     - `author`
     - `title`
-    - `journal = {CoRR}`
-    - `volume = {abs/PAPER_ID}`
     - `archivePrefix = {arXiv}`
     - `eprint = {PAPER_ID}`
+    - `primaryClass = {cs.CL}`
     - `year`
-  * Not to include: `url`
+  * Not to include: `journal`, `url`, `volume`
   * Example
   ```
-  @article{Balog:2020:CCC,
+  @misc{Balog:2020:arXiv,
     author = {Krisztian Balog and Lucie Flekova and Matthias Hagen and Rosie Jones and Martin Potthast and Filip Radlinski and Mark Sanderson and Svitlana Vakulenko and Hamed Zamani},
     title = {Common Conversational Community Prototype: Scholarly Conversational Assistant},
-    journal = {CoRR},
-    volume = {abs/2001.06910},
     archivePrefix = {arXiv},
     eprint = {2001.06910},
+    primaryClass = {cs.CL},
     year = {2020}
   }
   ```  
 
-### Fields for books
+### Citing books
 
-  * To include:
+  * Fields to include:
     - `author`
     - `title`
     - `publisher`
@@ -99,7 +106,7 @@
   * Not to include: `address`, `doi`, `isbn`, `url`, etc.
   * Example
   ```
-  @book{Balog:2018:EOS,
+  @book{Balog:2018:Book,
     author = {Krisztian Balog},
     title = {Entity-Oriented Search},
     series = {The Information Retrieval Series},
@@ -109,9 +116,9 @@
   }
   ```
 
-### Fields for PhD theses
+### Citing PhD theses
 
-  * To include:
+  * Fields to include:
     - `author`
     - `title`
     - `school`
@@ -119,7 +126,7 @@
   * Not to include: `address`, `doi`, `isbn`, `url`, etc.
   * Example
   ```
-  @phdthesis{Maxwell:2019:MSS,
+  @phdthesis{Maxwell:2019:PhDThesis,
     author = {Maxwell, David Martin},
     title = {Modelling search and stopping in interactive information retrieval},
     school = {University of Glasgow},
