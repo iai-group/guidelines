@@ -61,7 +61,7 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
 ```JSON
 {
     "terminal.integrated.inheritEnv": false,
-    "editor.rulers": [80, 120],
+    "editor.rulers": [81, 121],
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
@@ -118,7 +118,7 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
             "query": "state:open repo:${owner}/${repository} -assignee:${user} -label:P0"
         }
     ],
-    "githubIssues.issueBranchTitle": "feature/#${issueNumber}-${sanitizedIssueTitle}",
+    "githubIssues.issueBranchTitle": "feature/${issueNumber}-${sanitizedIssueTitle}",
     "githubIssues.useBranchForIssues": "prompt",
     "githubPullRequests.defaultMergeMethod": "squash",
 }
