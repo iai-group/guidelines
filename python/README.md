@@ -10,7 +10,7 @@ Linting is the automatic process of checking for programmatic and stylistic erro
 
 We also use an auto-formatter to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.  In particular, we use [Black](https://github.com/psf/black).  The main incentive for using Black is to avoid having to think about many configuration options.  Black reformats entire files in place.
 
-You are strongly encouraged to use [PyCharm](https://www.jetbrains.com/pycharm/) as IDE. A [free educational license](https://www.jetbrains.com/community/education/) is available for both students and educators.  However, any other IDE may be used as long as it is configured accordingly.
+You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as IDE. This is a free, highly customisable text editor. We provide detailed instructions on the customisations we use.  However, any other IDE may be used as long as it is configured accordingly.
 
 
 ## Highlighted from the Google Python Style Guide
@@ -55,12 +55,13 @@ The following steps are to be performed when setting up a new code repository.
 
 ### Requirements
 
-Create a `requirements.txt` file which includes the following packages:
+Create a `environment.yml` file which includes the following packages:
 ```
-black
-flake8
-pre-commit
-pytest
+dependencies:
+ - black
+ - flake8
+ - pytest
+ - pre-commit
 ```
 
 ### Flake8
@@ -151,6 +152,7 @@ pytest
 
     Example file structure:
     ```
+    name: <env name>
     channels:
       - PyPi
       - conda-forge
