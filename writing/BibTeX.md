@@ -54,7 +54,7 @@ The naming of paper files should follow the same naming conventions, except that
   * Fields to include:
     - `author`
     - `title`
-    - `journal` using [ISO 4 abbreviation](https://www.issn.org/services/online-services/access-to-the-ltwa/) wherever available
+    - `journal` using full journal name if unlimited references; otherwise save space using [ISO 4 abbreviation](https://www.issn.org/services/online-services/access-to-the-ltwa/) ~~wherever available~~ for all words that have standardized abbreviations thereby. 
     - `volume`
     - `number`
     - `pages` (`xx--yy` that is, double dash)
