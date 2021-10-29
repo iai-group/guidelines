@@ -65,13 +65,15 @@ The naming of paper files should follow the same naming conventions, except that
   @article{Sanderson:2010:FnTIR,
     author = {Sanderson, Mark},
     title = {Test Collection Based Evaluation of Information Retrieval Systems},
-    journal = {Found. Trends Inf. Retr.},
+    journal = {Foundations and Trends in Information Retrieval},
     volume = {4},
     number = {4},
     pages = {247--375},
     year = {2010}
   }
   ```
+  
+  * If needed, the journal name would here be abbreviated as `Found. Trends Inf. Retr.`.
 
 ### Citing arXiv papers
 
