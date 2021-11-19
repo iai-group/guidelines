@@ -1,5 +1,8 @@
 # Code review guidelines
 
+Read the [Google code review guidelines](https://github.com/google/eng-practices) for a general overview on best review practices.
+Below are our internal rules.
+
 ## What to do as an author
 
   * Find a person to review
@@ -26,4 +29,5 @@
   * Docstrings
     - There should be docstrings for files, classes, and methods.
     - Exceptions: @property methods
-  * Compliance with style guide regarding formatting and naming conventions, etc.
+  * Compliance with style guide regarding formatting and naming conventions, import ordering, etc.
+  * Test coverage
