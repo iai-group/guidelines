@@ -21,7 +21,7 @@ on: [push, pull_request]
 
 # Jobs
 
-Jobs component sets up the server and the steps that should be executed. In this example we install dependencies using conda; run tests for `black`, `flake8`, and `pytest`; and upload results to CodeCov for test coverage analysis. 
+Jobs component sets up the server and the steps that should be executed. In this example we install dependencies using conda; run tests for `black`, `flake8`, and `pytest`; and upload results to CodeCov for test coverage analysis. **NB! In order to use CodeCov API, CODECOV_TOKEN needs to be added to secrets under the repository settings**
 
 ```
 jobs:
