@@ -54,4 +54,4 @@ For projects, one may choose between the [Feature Branch Workflow](https://www.a
 
 ## Pre-commit hooks
 
-See the [the section on pre-commit hooks under the Python style guide]().
+See the [the section on pre-commit hooks under the Python style guide](https://github.com/iai-group/guidelines/tree/main/python#install-pre-commit-hooks).
