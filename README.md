@@ -7,7 +7,7 @@ This repository defines guidelines for members and collaborators of the [Informa
   * [Markdown style guide](markdown/)
   * [GitHub workflows](github/)
   * [Scientific writing style guide](writing/)
-  * [Data](data/)
+  * [Supervision](supervision/)
 
 The style guides in this project are licensed under the [CC-By 4.0 License](https://creativecommons.org/licenses/by/4.0/), which encourages you to share these documents.
 
