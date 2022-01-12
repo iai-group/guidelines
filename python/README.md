@@ -10,7 +10,7 @@ Linting is the automatic process of checking for programmatic and stylistic erro
 
 We also use an auto-formatter to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.  In particular, we use [Black](https://github.com/psf/black).  The main incentive for using Black is to avoid having to think about many configuration options.  Black reformats entire files in place.
 
-You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as IDE. This is a free, highly customisable text editor. We provide detailed instructions on the customisations we use.  However, any other IDE may be used as long as it is configured accordingly.
+You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as IDE. This is a free, highly customisable text editor. We provide detailed instructions on the customisations we use [here](vscode/).  However, any other IDE may be used as long as it is configured accordingly.
 
 
 ## Highlighted from the Google Python Style Guide
@@ -184,22 +184,3 @@ dependencies:
 
 Make sure the packages `black`, `flake8`, `pre-commit`, and `pytest` are installed.
 Normally, these should be in the repository's requirements.txt file and can be installed using `pip install -r requirements.txt`.
-
-### PyCharm configuration (one-time)
-
-  * Flake8
-    - Preferences / External tools / Add (+)
-    - Program: path to black (e.g., `/opt/anaconda3/bin/flake8`)
-    - Arguments: `$FilePath$`
-    - Working directory: `$ProjectFileDir$`
-    - Setting up Flake8 issue highlighting is explained in a [separate document](PyCharm_Flake8.md)
-  * Black
-    - Add as an external tool
-      - Preferences / External tools / Add (+)
-      - Program: path to black (e.g., `/opt/anaconda3/bin/black`)
-      - Arguments: `$FilePath`
-      - Working directory: `$ProjectFileDir`
-    - Overwrite PyCharm's default Reformat Code shortcut with Black
-      - Preferences / Keymap
-      - Remove "&#8997; &#8984; L" from "Reformat Code"
-      - Add "&#8997; &#8984; L" to "External tools/Black"
