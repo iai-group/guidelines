@@ -4,9 +4,18 @@
         81,
         121
     ],
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
     "autoDocstring.customTemplatePath": "path/to/file/google.mustache",
     "pythonTestExplorer.testFramework": "pytest",
     "githubIssues.queries": [
