@@ -65,10 +65,21 @@ Settings can be configured using UI or modifying the settings (JSON) file. Here 
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
 }
 ```
 
- - To use lining and formatting in python files using `black` and `flake8` select the python environment which has those libraries installed. The selected interpreter is shown on the left side of the *Status Bar* and changing it can be done either by clicking on it or via *Command Palette*.
+ - To use lining and formatting in python files using `black` and `flake8`, select the python environment which has those libraries installed. The selected interpreter is shown on the left side of the *Status Bar*, and changing it can be done by clicking on it or via *Command Palette*.
+ - The above snippet also ensures imports sorting on save according to [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 
 #### Python Docstring Generator
 
