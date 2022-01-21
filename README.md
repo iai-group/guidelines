@@ -1,6 +1,6 @@
 # IAI Guidelines
 
-It is way easier to collaborate on code and papers by having a strictly defined practical guidelines.
+It is way easier to collaborate on code and papers by having a strictly defined set of practical guidelines.
 This repository defines guidelines for members and collaborators of the [Information Access & Interaction group](https://iai.group) at the University of Stavanger.
 
   * [GitHub workflows](github/)
