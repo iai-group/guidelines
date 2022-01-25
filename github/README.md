@@ -30,7 +30,7 @@ By default, we use the [Feature Branch Workflow](https://www.atlassian.com/git/t
     ```
     git checkout main
     git pull
-    git checkout feature/#27-adding-term-weighting
+    git checkout feature/27-adding-term-weighting
     git merge main
     ```
   * Ask for a code review
