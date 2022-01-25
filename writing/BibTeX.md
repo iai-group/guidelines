@@ -163,6 +163,20 @@ Depending on the paper style, arXiv papers may need different type and metadata 
   }  
   ```
 
+### Citing URLs
+
+  * Add a BibTeX entry when citing documentation; if you just need to include an URL of a website/code/dataset, use a footnote instead (if there is an associated paper, then cite that one as well, in addition to the footnote).
+  * Example
+  ```
+  @misc{Rasa:2022:doc,
+    author = {Rasa Technologies Inc.},
+    title = {Rasa Documentation},
+    year = {2022},
+    url = {https://rasa.com/docs/rasa/},
+    note = {Accessed: 2022-01-25}
+  }
+  ```
+
 ## Natbib
 
   * Always use [natbib](https://www.overleaf.com/learn/latex/natbib_citation_styles)!
