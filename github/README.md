@@ -21,7 +21,7 @@ By default, we use the [Feature Branch Workflow](https://www.atlassian.com/git/t
     git checkout main
     git fetch origin
     git reset --hard origin/main
-    git checkout -b feature/#27-adding-term-weighting
+    git checkout -b feature/27-adding-term-weighting
     ```
   * Commit changes
     - Follow the [guide for commit messages](Git_commit.md).
