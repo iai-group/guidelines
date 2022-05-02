@@ -85,7 +85,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     - `title`
     - `archivePrefix = {arXiv}`
     - `eprint = {PAPER_ID}`
-    - `primaryClass = {cs.CL}`
+    - `primaryClass = {...}` (e.g., `cs.IR`, `cs.CL`, etc.)
     - `year`
   * Not to include: `journal`, `url`, `volume`
   * Example
@@ -95,7 +95,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     title = {Common Conversational Community Prototype: Scholarly Conversational Assistant},
     archivePrefix = {arXiv},
     eprint = {2001.06910},
-    primaryClass = {cs.CL},
+    primaryClass = {cs.IR},
     year = {2020}
   }
   ```  
