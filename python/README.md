@@ -26,6 +26,7 @@ You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as I
     - All sentences must be terminated by a period, question mark, or exclamation point.
     - The docstring should be descriptive-style ("Fetches rows from a Bigtable.") rather than imperative-style ("Fetch rows from a Bigtable.").
     - Use `Args:`, `Returns:`, and `Raises:` for documenting functions.
+    - In case of the arguments with a description longer than one line in `Args:`, indent the following lines with 2 spaces.
   * Comments:
     - Either before the operation or on the same line.
       - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
