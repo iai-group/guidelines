@@ -5,8 +5,9 @@
   * README files are to be named all-caps `README.md`.
   * Other files names are capitalized (i.e., first letter of a word in uppercase, and the rest of the letters in lowercase) and `_` -separated (e.g., `Writing_style.md`).
 
-## Spacing
+## Headings
 
+  * Each file should start with a H1 heading (`#`) on line 1
   * There should be an empty line before and after headers.
     - The only exception to this rule is the heading on line 1 of a file.
 
