@@ -10,7 +10,7 @@
   * There should be an empty line before and after headers.
     - The only exception to this rule is the heading on line 1 of a file.
 
-## Markup
+## Lists
 
   * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. 
   * Indent items with 2 spaces.
