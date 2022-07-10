@@ -8,6 +8,7 @@
 ## Spacing
 
   * There should be an empty line before and after headers.
+    - The only exception to this rule is the heading on line 1 of a file.
 
 ## Markup
 
