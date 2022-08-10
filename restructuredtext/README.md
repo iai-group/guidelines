@@ -30,7 +30,6 @@ This is the subsubtitle
   * Nested lists items have to be separated from the top-level list items by blank lines.
 
 ```rst
-
 * List item 1
 * List item 2
 
@@ -41,7 +40,6 @@ This is the subsubtitle
   - Sub item 22
 
 * List item 3
-
 ```
 
 ## Additional resources
