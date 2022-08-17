@@ -9,16 +9,19 @@
   * Each file should start with a section heading block (`=`) on line 1.
   * The heading marker character line should be the same length as the heading text.
   * There should be an empty line before and after header blocks.
-    * The only exception to this rule is the heading on line 1 of a file.
+    - The only exception to this rule is the heading on line 1 of a file.
 
 ```rst
 This is the main title
 ======================
 
 This is the subtitle
-""""""""""""""""""""
+--------------------
 
 This is the subsubtitle
+""""""""""""""""""""
+
+This is the subsubsubtitle
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
