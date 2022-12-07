@@ -3,9 +3,10 @@
 It is way easier to collaborate on code and papers by having a set of strictly defined practical guidelines.
 This repository defines guidelines for members and collaborators of the [Information Access & Interaction group](https://iai.group) at the University of Stavanger.
 
-  * [GitHub workflows](github/) 
+  * [GitHub workflows](github/)
     - [Commit messages](github/Git_commit.md), [Code review](github/Code_review.md)
   * [Markdown style guide](markdown/)
+  * [reStructuredText style guide](reStructuredText/)
   * [Python style guide](python/)
     - [VS Code](python/vscode)
   * [Scientific writing style guide](writing/)
