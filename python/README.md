@@ -6,9 +6,13 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
 
 **Unless stated otherwise, we assume Python 3.9.**
 
-Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.
+Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.  
+
+Additionally, we use Mypy. It is a static type checker for Python that aims to combine the benefits of dynamic and static typing. Mypy type checks programs that have type annotations conforming to PEP 484.
 
 We also use an auto-formatter to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.  In particular, we use [Black](https://github.com/psf/black).  The main incentive for using Black is to avoid having to think about many configuration options.  Black reformats entire files in place.
+
+In addition to code, we also use auto-formatter for docstrings called [docformatter](https://pypi.org/project/docformatter/). It ensures all docstrings conform to the Google docstring style we follow.
 
 You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as IDE. This is a free, highly customisable text editor. We provide detailed instructions on the customisations we use [here](vscode/).  However, any other IDE may be used as long as it is configured accordingly.
 
@@ -99,6 +103,7 @@ pre-commit
   * Create a folder called `tests` at the root of the repository and make it a module by creating a `__init__.py` file.
   * Use the same module structure under `tests` as the source code, with files prefixed with `test_`.
   * If you need to run the tests explicitly without needing to commit run `pytest tests -vv` use `-vv` to make it verbose.
+
 
 ### Install pre-commit hooks
 
