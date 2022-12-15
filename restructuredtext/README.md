@@ -45,6 +45,29 @@ This is the subsubsubtitle
 * List item 3
 ```
 
+## Code blocks
+
+  * Use the following directive to insert a block of code: `.. code-block:: [language]`.
+  * There should be an empty line before and after the directive and after the code.
+
+Example:
+```rst
+See python code block below.
+
+.. code-block:: python
+
+  import os
+
+This is a new paragraph.
+```
+
+## References python objects
+
+  * Reference a module with `:py:mod:` followed by the name of the module (e.g., `` :py:mod:`package.module` ``).
+  * Reference a class with `:py:class:` followed by the name of the class (e.g., `` :py:class:`package.module.class` ``).
+  * Reference a function with `:py:func:` followed by the name of the function (e.g., `` :py:func:`package.module.function` ``).
+  * More details [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-python-objects).
+
 ## Additional resources
 
   * [Sphinx reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
