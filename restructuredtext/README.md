@@ -50,7 +50,6 @@ This is a paragraph
 * List item 3
 ```
 
-<<<<<<< HEAD
 ## Links
 
 ### Referencing Python objects
