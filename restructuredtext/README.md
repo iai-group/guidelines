@@ -78,7 +78,6 @@ To use a custom link:
 External hyperlinks, like `Python <http://www.python.org/>`_. Mind that you need the "_" in the end.
 ```
 
-
 ### Linking headings within the document
 
 ```
@@ -92,7 +91,6 @@ My Heading
 ----------
 
 ```
-
 
 ## Annotations
 
