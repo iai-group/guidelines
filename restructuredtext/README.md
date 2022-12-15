@@ -50,9 +50,17 @@ This is a paragraph
 * List item 3
 ```
 
+<<<<<<< HEAD
 ## Links
 
-### Link a dynamically generated page
+### Referencing Python objects
+
+  * Reference a module with `:py:mod:` followed by the name of the module (e.g., `` :py:mod:`package.module` ``).
+  * Reference a class with `:py:class:` followed by the name of the class (e.g., `` :py:class:`package.module.class` ``).
+  * Reference a function with `:py:func:` followed by the name of the function (e.g., `` :py:func:`package.module.function` ``).
+  * More details [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-python-objects).
+
+### Linking dynamically generated pages
 
 ```
 :doc:`api/nordlys.core.retrieval`
@@ -65,14 +73,14 @@ To use a custom link:
 :doc:`Retrieval <api/nordlys.core.retrieval>`
 ```
 
-### Link to an external page
+### Linking external pages
 
 ```
 External hyperlinks, like `Python <http://www.python.org/>`_. Mind that you need the "_" in the end.
 ```
 
 
-### Link to a heading within a document
+### Linking headings within the document
 
 ```
 * :ref:`my_label`
@@ -86,16 +94,25 @@ My Heading
 
 ```
 
-### Link to a module or package
-
-```
-:py:mod:`nordlys.services.el`
-```
-
-For referencing other Python objects, see http://www.sphinx-doc.org/en/stable/domains.html#python-roles
-
 
 ## Annotations
+
+## Code blocks
+
+  * Use the following directive to insert a block of code: `.. code-block:: [language]`.
+  * There should be an empty line before and after the directive and after the code.
+
+Example:
+
+```rst
+See python code block below.
+
+.. code-block:: python
+
+  import os
+
+This is a new paragraph.
+```
 
 ### Notes
 
@@ -107,12 +124,6 @@ For referencing other Python objects, see http://www.sphinx-doc.org/en/stable/do
 
 ```
 .. todo:: Your text comes here
-```
-
-### Code blocks
-
-```
-.. code:: python
 ```
 
 ## Additional resources
