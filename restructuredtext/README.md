@@ -51,6 +51,7 @@ This is the subsubsubtitle
   * There should be an empty line before and after the directive and after the code.
 
 Example:
+
 ```rst
 See python code block below.
 
@@ -61,7 +62,7 @@ See python code block below.
 This is a new paragraph.
 ```
 
-## References python objects
+## References Python objects
 
   * Reference a module with `:py:mod:` followed by the name of the module (e.g., `` :py:mod:`package.module` ``).
   * Reference a class with `:py:class:` followed by the name of the class (e.g., `` :py:class:`package.module.class` ``).
