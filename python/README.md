@@ -4,7 +4,7 @@ Keep in mind that **сode is read more often than it is written**.
 
 We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).  This document highlights a number of peculiarities to pay special attention to, and potentially complements the Google style guide on issues not specified there.
 
-**Unless stated otherwise, we assume Python 3.7.**
+**Unless stated otherwise, we assume Python 3.9.**
 
 Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.
 
@@ -56,13 +56,14 @@ The following steps are to be performed when setting up a new code repository.
 
 ### Requirements
 
-Create a `environment.yml` file which includes the following packages:
+Create a `requirements.txt` file which includes the following packages:
 ```
-dependencies:
- - black
- - flake8
- - pytest
- - pre-commit
+black
+flake8
+pytest
+mypy
+docformatter
+pre-commit
 ```
 
 ### Flake8
@@ -101,28 +102,8 @@ dependencies:
 
 ### Install pre-commit hooks
 
-  * This is to be done once all the requirements are (black, flake8, and pre-commit) are installed!
-  * Create a `.pre-commit-config.yaml` with the followings:
-    ```
-    repos:
-    -   repo: https://github.com/ambv/black
-        rev: 20.8b1
-        hooks:
-        - id: black
-          language_version: python3.7
-    -   repo: https://gitlab.com/pycqa/flake8
-        rev: 3.9.0
-        hooks:
-        - id: flake8
-    -   repo: local
-        hooks:
-        -   id: pytest
-            name: run tests
-            entry: pytest tests -vv
-            language: system
-            always_run: true
-            pass_filenames: false
-    ```
+  * This is to be done once all the requirements are (`black`, `flake8`,  `mypy`, `docformatter`, and `pre-commit`) are installed!
+  * Create a `.pre-commit-config.yaml` following [this](https://github.com/iai-group/template-project/blob/main/.pre-commit-config.yaml) example.
   * Execute `pre-commit install` to install pre-commit hooks (which are defined in `.pre-commit-config.yaml`).
   * If the pytest when running as pre-commit hook fails even though all tests pass make sure there are no modified files left unstaged.
   * If Black fails with reformatted files and adding reformatted files to staging area still doesn't fix it, then run the `black file_name.py` explicitly and then add that file so the staging area and commit again.
@@ -138,7 +119,7 @@ dependencies:
 
   * If we already know some of the libraries we want to include, we can simply append those to the end:
     ```
-    conda create -n myenv python=3.7 pip black flake8 pre-commit pytest
+    conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter
     ```
   * To add more libraries after we already created and activated the environment:
     ```
@@ -146,26 +127,46 @@ dependencies:
     ```
       - The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
-  * Alternatively, we can create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
+  * Alternative 1
+    * Create conda environment containing only python and pip and activate it
     ```
-    conda env create -n myenv --file environment.yaml
+    conda create -n myenv python=3.9 pip@
+    conda activate myenv
     ```
-
+    * Install all other dependencies using pip
+    ```
+    python -m pip install -r requirements.txt
+    ```
     Example file structure:
     ```
-    name: <env name>
-    channels:
-      - PyPi
-      - conda-forge
-      - defaults
-    dependencies:
-      - python
-      - pip
-      - pre-commit
-      - flake8
-      - pytest
-      - black
+    black
+    flake8
+    mypy
+    docformatter
+    pre-commit
     ```
+
+  * Alternative 2
+    * create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
+      ```
+      conda env create -n myenv --file environment.yaml
+      ```
+
+      Example file structure:
+      ```
+      name: <env name>
+      channels:
+        - PyPi
+        - conda-forge
+        - defaults
+      dependencies:
+        - python
+        - pip
+        - pre-commit
+        - flake8
+        - pytest
+        - black
+      ```
 
   * To export all dependencies to a cross platform `environment.yaml` file:
     ```
