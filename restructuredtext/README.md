@@ -94,7 +94,7 @@ My Heading
 
 ## Annotations
 
-## Code blocks
+### Code blocks
 
   * Use the following directive to insert a block of code: `.. code-block:: [language]`.
   * There should be an empty line before and after the directive and after the code.
