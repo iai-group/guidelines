@@ -19,4 +19,4 @@ on: [push, pull_request]
 
 # Jobs
 
-The jobs component sets up the server and the steps that should be executed. In [this](https://github.com/iai-group/template-project/blob/main/.github/workflows/python-package-conda.yaml) example we install dependencies; run tests for `black`, `flake8`, `mypy`, `docformatter` and `pytest`;
+The jobs component sets up the server and the steps that should be executed. In [this](https://github.com/iai-group/template-project/blob/main/.github/workflows/python-package-conda.yaml) example we install dependencies; run tests for `black`, `flake8`, `mypy`, `docformatter`, `pydocstyle`, and `pytest`;
