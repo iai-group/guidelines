@@ -12,7 +12,7 @@ There are a few simple rules that every supervised student is expected to follow
   * Show up on time and be mindful of the allocated meeting time.
   * You need to come to the meetings preparred with an agenda and keep notes (see below).
   * If you need to cancel the meeting, that's fine. Cancelling the meeting more than three times during the semester (excepting cases of illness) means you resign from the project effective immediately.
-  * You are required to prepare a project plan and get it approved from the supervisors as soon as possible.
+  * You are required to prepare a project plan and get it approved from the supervisors as soon as possible. 
   
 
 ### Main activities
@@ -44,7 +44,7 @@ During different periods, some activities will be more pronounced than others (e
        - There may also be TODOs for your supervisor. Prefix them with their initials, e.g., "[KB]".
   * If there are items that need preparation from the supervisor's end before the meeting, i.e., the questions/blockers block is not empty, make sure you share the agenda at least 24 hours before the meeting (by emailing the link to your Google document).
 
-### Supervisor roles and responsibilities
+### Supervisor roles and responsibilities 
 * Each thesis group has a course coordinator (fagligansvarlig) and a supervisor. 
 * The supervisor can be internal if the thesis work is carried out at the UiS or external if the thesis work is carried out at an external company.
 * Course coordinator and internal supervisor can be different people in case PhD students are the internal supervisors.
@@ -58,6 +58,7 @@ During different periods, some activities will be more pronounced than others (e
   - Require a project plan from the students
   - Require that students prepare for the meetings and that they show progression during the semester
  * The student has to agree on specific supervison rules with the external supervisor in case of thesis work carried out at an external company.
+ * See [here](https://www.uis.no/sites/default/files/2021-10/Course%20coordinator%20for%20Bachelor%27s%20and%20Master%27s%20Theses.pdf) for more information
 
 
 ### Thesis
@@ -68,7 +69,7 @@ The thesis is your main deliverable and should be your #1 priority!
 
   * Follow the [IAI Scientific Writing Guidelines](https://github.com/iai-group/guidelines/tree/main/writing).
   
-  * Use the following templates for writing your thesis. You may either use overleaf template or the github repo. Optionally you can sync them both.
+  * Use the following templates for writing your thesis. You may either use the overleaf template or the github repo. Optionally you can sync them both.
     - BSc thesis template [Overleaf](https://www.overleaf.com/read/vqcfdjzmcnsm), [GitHub](https://github.com/iai-group/template-thesis-bsc)
     - MSc thesis template [Overleaf](https://www.overleaf.com/read/mtmtjzbtbwbm), [GitHub](https://github.com/iai-group/template-thesis-msc)
 
