@@ -50,14 +50,14 @@ During different periods, some activities will be more pronounced than others (e
  * The supervisor can be internal if the thesis work is carried out at the UiS or external if the thesis work is carried out at an external company.
  * The course coordinator and internal supervisor can be the same person (e.g., professor) or can be two different people (e.g., internal supervisor is a PhD student).
  * Course coordinator's responsibilities:
-   - Approves the level and scope of the project
-   - Signs a contract with the students before formal registration
-   - Approves the progress plan for the work
+   - Approves the level and scope of the project.
+   - Signs a contract with the students before formal registration.
+   - Approves the progress plan for the work.
    - Students are entitled to at least five meetings with the course coordinator throughout the semester.
  * Internal supervisor's responsibilities:
    - Meets regularly with the student(s) during the semester (min. one meeting every two weeks).
-   - Requires a project plan from the student(s)
-   - Requires that students prepare for the meetings and that they show progression during the semester
+   - Requires a project plan from the student(s).
+   - Requires that students prepare for the meetings and that they show progression during the semester.
   * The student has to agree on specific supervison rules with the external supervisor in case the thesis work carried out at an external company.
   * See [here](https://www.uis.no/sites/default/files/2021-10/Course%20coordinator%20for%20Bachelor%27s%20and%20Master%27s%20Theses.pdf) for more information.
 
