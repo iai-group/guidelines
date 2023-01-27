@@ -46,7 +46,7 @@ During different periods, some activities will be more pronounced than others (e
 
 ### Supervisor roles and responsibilities 
 
- * Each thesis group has a course coordinator (fagligansvarlig) and a supervisor. 
+ * Each thesis has a course coordinator (fagligansvarlig) and a supervisor. 
  * The supervisor can be internal if the thesis work is carried out at the UiS or external if the thesis work is carried out at an external company.
  * The course coordinator and internal supervisor can be the same person (e.g., professor) or can be two different people (e.g., internal supervisor is a PhD student).
  * Course coordinator's responsibilities:
