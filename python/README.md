@@ -127,7 +127,7 @@ pydocstyle==6.1.1
 
   * If we already know some of the libraries we want to include, we can simply append those to the end:
     ```
-    conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter pydocstyle=6.1.1
+    conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter pydocstyle>=6.1.1
     ```
   * To add more libraries after we already created and activated the environment:
     ```
@@ -152,7 +152,7 @@ pydocstyle==6.1.1
     mypy
     docformatter
     pre-commit
-    pydocstyle==6.1.1
+    pydocstyle>=6.1.1
     ```
 
   * Alternative 2
@@ -177,7 +177,7 @@ pydocstyle==6.1.1
         - black
         - mypy
         - docformatter
-        - pydocstyle=6.1.1
+        - pydocstyle>=6.1.1
       ```
 
   * To export all dependencies to a cross platform `environment.yaml` file:
