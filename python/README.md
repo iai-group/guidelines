@@ -70,7 +70,7 @@ pytest
 mypy
 docformatter
 pre-commit
-pydocstyle==6.1.1
+pydocstyle>=6.1.1
 ```
 
 ### Flake8
