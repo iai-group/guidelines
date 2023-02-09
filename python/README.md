@@ -8,6 +8,8 @@ We follow the [Google Python Style Guide](https://google.github.io/styleguide/py
 
 Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.  
 
+We also use the docstring linter [pydocstyle](http://www.pydocstyle.org/en/stable/) to check compliance with PEP 257. It ensures that the code is well documented and follows standards.
+
 Additionally, we use Mypy. It is a static type checker for Python that aims to combine the benefits of dynamic and static typing. Mypy type checks programs that have type annotations conforming to PEP 484.
 
 We also use an auto-formatter to ensure that we are consistent with the style guide.  This directly reduces the need for discussions about formatting questions.  In particular, we use [Black](https://github.com/psf/black).  The main incentive for using Black is to avoid having to think about many configuration options.  Black reformats entire files in place.
@@ -68,6 +70,7 @@ pytest
 mypy
 docformatter
 pre-commit
+pydocstyle>=6.1.1
 ```
 
 ### Flake8
@@ -107,7 +110,7 @@ pre-commit
 
 ### Install pre-commit hooks
 
-  * This is to be done once all the requirements are (`black`, `flake8`,  `mypy`, `docformatter`, and `pre-commit`) are installed!
+  * This is to be done once all the requirements are (`black`, `flake8`, `mypy`, `docformatter`, `pydocstyle`, and `pre-commit`) are installed!
   * Create a `.pre-commit-config.yaml` following [this](https://github.com/iai-group/template-project/blob/main/.pre-commit-config.yaml) example.
   * Execute `pre-commit install` to install pre-commit hooks (which are defined in `.pre-commit-config.yaml`).
   * If the pytest when running as pre-commit hook fails even though all tests pass make sure there are no modified files left unstaged.
@@ -124,7 +127,7 @@ pre-commit
 
   * If we already know some of the libraries we want to include, we can simply append those to the end:
     ```
-    conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter
+    conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter pydocstyle>=6.1.1
     ```
   * To add more libraries after we already created and activated the environment:
     ```
@@ -149,6 +152,7 @@ pre-commit
     mypy
     docformatter
     pre-commit
+    pydocstyle>=6.1.1
     ```
 
   * Alternative 2
@@ -171,6 +175,9 @@ pre-commit
         - flake8
         - pytest
         - black
+        - mypy
+        - docformatter
+        - pydocstyle>=6.1.1
       ```
 
   * To export all dependencies to a cross platform `environment.yaml` file:
@@ -189,5 +196,5 @@ pre-commit
 
 ### Packages
 
-Make sure the packages `black`, `flake8`, `pre-commit`, and `pytest` are installed.
+Make sure the packages `black`, `flake8`, `mypy`, `docformatter`, `pydocstyle`, `pre-commit`, and `pytest` are installed.
 Normally, these should be in the repository's requirements.txt file and can be installed using `pip install -r requirements.txt`.
