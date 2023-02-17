@@ -36,6 +36,7 @@
 
 ## Equations and math
 
+  * Use `$...$` for inline math
   * Number only those equations that are referenced later in the text. For non-numbered equations, use the `equation*` environment.
   * It is preferred to put the `label` tag after the actual formula, before the `\end{equation}` tag
   * Use `\eqref` instead of `\ref` when referring to equations
