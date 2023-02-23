@@ -19,10 +19,21 @@ line interface (CLI).
 
 import argparse
 import json
+import logging
 import typing
 
+logging.basicConfig(
+    level=logging.WARNING,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
+)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
-def dummy_line_modification(line: str, i: int, mods: typing.Dict[str, dict]) -> str:
+
+def dummy_line_modification(
+    line: str, i: int, mods: typing.Dict[str, dict]
+) -> str:
     """Defines the modification to be perfomed for a single input line.
 
     Args:
@@ -36,7 +47,9 @@ def dummy_line_modification(line: str, i: int, mods: typing.Dict[str, dict]) -> 
     output_line = line.rstrip("\n") + " \t | "
     if not mods == dict():
         if i % 3 == 0 and i % 5 == 0:
-            output_line += str(mods["fizz"][str(i % 5)]) + str(mods["buzz"][str(i % 3)])
+            output_line += str(mods["fizz"][str(i % 5)]) + str(
+                mods["buzz"][str(i % 3)]
+            )
         elif i % 3 == 0:
             output_line += str(mods["fizz"][str(i % 5)])
         elif i % 5 == 0:
@@ -46,7 +59,9 @@ def dummy_line_modification(line: str, i: int, mods: typing.Dict[str, dict]) -> 
     return output_line + "\n"
 
 
-def dummy_function(input_path: str, output_path: str, mod_path: str = None) -> None:
+def dummy_function(
+    input_path: str, output_path: str, mod_path: str = None
+) -> None:
     """Takes input from a file, modifies each line, and writes output
     accordingly, line by line.
 
@@ -73,11 +88,11 @@ def dummy_function(input_path: str, output_path: str, mod_path: str = None) -> N
 class DummyThing:
     def __init__(self, mood: str, weight: float, color: str = "green") -> None:
         """The class docstring goes under the __init__ method.
-        
+
         Args:
             mode: What mode the class should instantiate: happy or sad.
-            weight (float): How heavy this thing is in Earth gravity. 
-            color (str): The optical color label of the imaginary object.            
+            weight (float): How heavy this thing is in Earth gravity.
+            color (str): The optical color label of the imaginary object.
         """
         self._mood = mood
         self._color = color
@@ -88,7 +103,7 @@ class DummyThing:
         """Methods can be defined that reveal private variables.
 
         Returns:
-            float: The value of the weight of the object. 
+            float: The value of the weight of the object.
         """
         return self._weight
 
@@ -144,14 +159,15 @@ if __name__ == "__main__":
         "-x",
         "--mood",
         dest="mood",
+        choices=["happy", "sad"],
         help="The mode argument for the DummyClass object",
         default=None,
         required=True,
     )
     args = parser.parse_args()
 
-    # Execute script given parsed arguments.
+    logger.info("Execute script given parsed arguments.")
     dummy_function(args.input_path, args.output_path, args.mod_path)
     my_dummything = DummyThing(args.mood, 456.9)
-    print(my_dummything.act("sing"))
-    print(my_dummything.act("dance"))
+    logger.info(my_dummything.act("sing"))
+    logger.info(my_dummything.act("dance"))
