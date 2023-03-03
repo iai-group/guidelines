@@ -1,6 +1,6 @@
 # Hosting a versioned documentation on GitHub Pages
 
-## Documentation organization
+## Documentation recommended organization
 
 The documentation is organized as follows: 
 
@@ -42,7 +42,7 @@ It is recommended to add them to `requirements.txt`, so the workflow can easily 
 
 ## Workflow
 
-A GitHub workflow and actions are used to automatically build and host the updated documentation when the `main` branch is updated.
+A GitHub workflow and action are used to automatically build and host the updated documentation when the `main` branch is updated.
 
   * Create new workflow `build_docs.yaml`
 
@@ -82,7 +82,7 @@ jobs:
           sphinxopts: ''
 ```
 
-  * Create new actions `action.yaml` under `.github/workflow/actions/buidl_docs`. This action builds a versioned documentation based the configuration.
+  * Create a new action `action.yaml` under `.github/workflow/actions/buidl_docs`. This action builds a versioned documentation based the configuration.
 
 ```yaml
 name: 'Sphinx docs to GitHub Pages'
