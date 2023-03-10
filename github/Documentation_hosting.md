@@ -1,24 +1,8 @@
 # Hosting a versioned documentation on GitHub Pages
 
-## Documentation recommended organization
+This page describe how to create versioned documentation and host it on a GitHub page.
 
-The documentation is organized as follows: 
-
-```
-.
-├── docs
-│   ├── source
-│   │   ├── _static                     # Contains documentation images 
-│   │   │   └── image.png               
-│   │   ├── _templates
-│   │   │   └── versions.html           # HTML to display the different versions
-│   │   ├── README.md
-│   │   ├── conf.py                     # Documentation configuration
-│   │   ├── installation.rst            # Documentation files
-│   │   └── index.rst                   # Documentation index
-```
-
-The documentation is written in `.rst` files and the configuration is defined in `conf.py`.
+The versioned documentation is built with [sphinx-multiversion](https://holzhaus.github.io/sphinx-multiversion/master/index.html).
 
 ## Requirements
 
@@ -38,11 +22,41 @@ myst-parser
 sphinx-multiversion==0.2.4
 ```
 
-It is recommended to add them to `requirements.txt`, so the workflow can easily install them.
+It is recommended to add them to `requirements.txt`, so they can easily be installed and maintained.
+
+## Documentation recommended organization
+
+To be able to use the [workflow](#workflow) below, the documentation needs to be organized as follows: 
+
+```
+.
+├── docs
+│   ├── README.md
+│   ├── source
+│   │   ├── _static                     # Contains documentation images 
+│   │   │   └── image.png               
+│   │   ├── _templates
+│   │   │   └── versions.html           # HTML to display the different versions
+│   │   ├── conf.py                     # Documentation configuration
+│   │   ├── installation.rst            # Documentation files
+│   │   └── index.rst                   # Documentation index
+```
+
+The documentation is written in `.rst` files and the configuration is defined in `conf.py`.
+
+## Build the documentation locally
+
+To build the documentation locally use the following command:
+
+```bash
+sphinx-multiversion docs/source build/html
+```
+
+This will create the documentation for each version of the package under the folder `build/html`. Each version has its own folder.
 
 ## Workflow
 
-A GitHub workflow and action are used to automatically build and host the updated documentation when the `main` branch is updated.
+A GitHub workflow and action can be used to automatically build and host an up-to-date documentation when the `main` branch is updated.
 
   * Create new workflow `build_docs.yaml`
 
@@ -82,7 +96,7 @@ jobs:
           sphinxopts: ''
 ```
 
-  * Create a new action `action.yaml` under `.github/workflow/actions/buidl_docs`. This action builds a versioned documentation based the configuration.
+  * Create a new action `action.yaml` under `.github/workflow/actions/build_docs`. This action builds a versioned documentation based the configuration.
 
 ```yaml
 name: 'Sphinx docs to GitHub Pages'
