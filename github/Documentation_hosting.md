@@ -1,6 +1,6 @@
 # Hosting a versioned documentation on GitHub Pages
 
-This page describe how to create versioned documentation and host it on a GitHub page.
+This page describes how to create versioned documentation and host it on a GitHub page.
 
 The versioned documentation is built with [sphinx-multiversion](https://holzhaus.github.io/sphinx-multiversion/master/index.html).
 
