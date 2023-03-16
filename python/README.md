@@ -18,7 +18,6 @@ In addition to code, we also use auto-formatter for docstrings called [docformat
 
 You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as IDE. This is a free, highly customisable text editor. We provide detailed instructions on the customisations we use [here](vscode/).  However, any other IDE may be used as long as it is configured accordingly.
 
-
 ## Highlighted from the Google Python Style Guide
 
   * Maximum line length is 80 characters.
@@ -39,13 +38,16 @@ You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as I
     - Comments should be as readable as narrative text, with proper capitalization and punctuation.
   * Imports:
     - Always at the top of the file, just after any module comments and docstrings and before module globals and constants.
+    - Use `from <module> import <name>` for importing a single object or `import <module>` for importing a module.
+      - Do not use `from <module> import *`.
     - Imports should be grouped from most generic to least generic:
       - Standard library imports.
       - Related third party imports.
       - Local application/library specific imports.
       - A blank line between each group of imports.
       - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
-    - Avoid relative imports, always use the full package name.
+    - Avoid relative imports and use the full package name.
+      - The only exception is when importing inside `__init__.py` files. In this case, we use relative imports from the same module. This simplifies the long paths when importing to other modules.
 
 ## Amendments to the Google style guide
 
@@ -63,6 +65,7 @@ The following steps are to be performed when setting up a new code repository.
 ### Requirements
 
 Create a `requirements.txt` file which includes the following packages:
+
 ```
 black
 flake8
@@ -75,8 +78,9 @@ pydocstyle>=6.1.1
 
 ### Flake8
 
-   * Create a `.flake8` file in the repo root with the following default settings:
-     ```
+  * Create a `.flake8` file in the repo root with the following default settings:
+
+     ```.flake8
      [flake8]
      max-line-length = 80
      max-complexity = 10
@@ -85,18 +89,22 @@ pydocstyle>=6.1.1
          .git,
          __pycache__
      ```
-   * Note that some warnings need to be ignored because of conflicting formatting by Black.
+
+  * Note that some warnings need to be ignored because of conflicting formatting by Black.
 
 ### Black
 
   * Have the following block in the `pyproject.toml` file in the repo root:
-    ```
+
+    ```toml
     [tool.black]
     line-length = 80
     target-version = ['py37']
     ```
+
   * Include the Black badge in the repo README.md:
-    ```
+
+    ```markdown
     [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
     ```
 
@@ -107,7 +115,6 @@ pydocstyle>=6.1.1
   * Use the same module structure under `tests` as the source code, with files prefixed with `test_`.
   * If you need to run the tests explicitly without needing to commit run `pytest tests -vv` use `-vv` to make it verbose.
 
-
 ### Install pre-commit hooks
 
   * This is to be done once all the requirements are (`black`, `flake8`, `mypy`, `docformatter`, `pydocstyle`, and `pre-commit`) are installed!
@@ -115,7 +122,6 @@ pydocstyle>=6.1.1
   * Execute `pre-commit install` to install pre-commit hooks (which are defined in `.pre-commit-config.yaml`).
   * If the pytest when running as pre-commit hook fails even though all tests pass make sure there are no modified files left unstaged.
   * If Black fails with reformatted files and adding reformatted files to staging area still doesn't fix it, then run the `black file_name.py` explicitly and then add that file so the staging area and commit again.
-
 
 ## Local development configuration
 
@@ -126,27 +132,36 @@ pydocstyle>=6.1.1
   * After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
 
   * If we already know some of the libraries we want to include, we can simply append those to the end:
-    ```
+
+    ```shell
     conda create -n myenv python=3.9 pip black flake8 pre-commit pytest mypy docformatter pydocstyle>=6.1.1
     ```
+
   * To add more libraries after we already created and activated the environment:
-    ```
+
+    ```shell
     conda install jupyter -y
     ```
-      - The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
+
+    - The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
   * Alternative 1
     * Create conda environment containing only python and pip and activate it
-    ```
+
+    ```shell
     conda create -n myenv python=3.9 pip@
     conda activate myenv
     ```
+
     * Install all other dependencies using pip
-    ```
+
+    ```shell
     python -m pip install -r requirements.txt
     ```
+
     Example file structure:
-    ```
+
+    ```txt
     black
     flake8
     mypy
@@ -157,12 +172,14 @@ pydocstyle>=6.1.1
 
   * Alternative 2
     * create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
-      ```
+
+      ```shell
       conda env create -n myenv --file environment.yaml
       ```
 
       Example file structure:
-      ```
+
+      ```yaml
       name: <env name>
       channels:
         - PyPi
@@ -181,14 +198,17 @@ pydocstyle>=6.1.1
       ```
 
   * To export all dependencies to a cross platform `environment.yaml` file:
-    ```
+
+    ```shell
     conda env export --from-history > environment.yaml
     ```
+
     - Here, `--from-history` only includes dependencies specified by the user, omitting this will include all present dependencies. Note that you might want to remove `name` and `prefix` from the created file.
     - Using `--no-builds` will remove specific version numbers.
 
   * To remove an environment first deactivate and then:
-    ```
+
+    ```shell
     conda env remove -n myenv
     ```
 
