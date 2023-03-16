@@ -6,6 +6,7 @@
   * Some specific words with the chosen spelling
     - `ad hoc`
     - `behavior`
+    - `crowdsourcing` is a single word, but `crowd worker` is two words
     - `dataset`
     - `dialogue`
     - `judgment`
