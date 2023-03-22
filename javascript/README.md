@@ -5,6 +5,7 @@
   * Use [eslint](https://eslint.org/) for linting
   * Use [prettier](https://prettier.io/) for formatting
   * Use [jest](https://jestjs.io/) for testing
+  * Highly recommended: Use [react](https://reactjs.org/) for UI development
 
 ## Bootstrap
 
