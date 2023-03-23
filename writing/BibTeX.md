@@ -1,11 +1,5 @@
 # BibTeX conventions
 
-## Zotero
-
-  * We recommend using [Zotero](https://www.zotero.org/) (a free, open-source reference management software) to manage your bibliography and generate BibTeX entries.
-  * Combined with [Better BibTeX](https://retorque.re/zotero-better-bibtex/), it can be used to generate BibTeX entries in the correct format.
-  * [Here](resources/zotero-config.json) is a configuration file that can be imported into Zotero to set up the correct citation style and export options.
-
 ## Bib entries
 
   * Keep all bib entries in a separate .bib file.
