@@ -3,7 +3,7 @@
 ## Bib entries
 
   * Keep all bib entries in a separate .bib file.
-  * **Keep the .bib file tidy**: 
+  * **Keep the .bib file tidy**:
     - It should contain **only papers that are actually referenced** in the current paper (not all your personal bibliography)!
     - Entries should have **only the required metadata fields**.
     - Entries should be **ordered by Bib key**.
@@ -38,6 +38,7 @@ The naming of paper files should follow the same naming conventions, except that
     - `year`
   * Not to include: `publisher`, `address`, `abstract`, `keywords`, `doi`, `url`, etc.
   * Example
+
   ```
   @inproceedings{Zhang:2020:KDD,
     author = {Zhang, Shuo and Balog, Krisztian},
@@ -54,13 +55,14 @@ The naming of paper files should follow the same naming conventions, except that
   * Fields to include:
     - `author`
     - `title`
-    - `journal` using full journal name if unlimited references; otherwise save space using [ISO 4 abbreviation](https://www.issn.org/services/online-services/access-to-the-ltwa/) ~~wherever available~~ for all words that have standardized abbreviations thereby. 
+    - `journal` using full journal name if unlimited references; otherwise save space using [ISO 4 abbreviation](https://www.issn.org/services/online-services/access-to-the-ltwa/) ~~wherever available~~ for all words that have standardized abbreviations thereby.
     - `volume`
     - `number`
     - `pages` (`xx--yy` that is, double dash)
     - `year`
   * Not to include: `publisher`, `address`, `abstract`, `keywords`, `doi`, `url`, etc.
   * Example
+
   ```
   @article{Sanderson:2010:FnTIR,
     author = {Sanderson, Mark},
@@ -89,6 +91,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     - `year`
   * Not to include: `journal`, `url`, `volume`
   * Example
+
   ```
   @misc{Balog:2020:arXiv,
     author = {Krisztian Balog and Lucie Flekova and Matthias Hagen and Rosie Jones and Martin Potthast and Filip Radlinski and Mark Sanderson and Svitlana Vakulenko and Hamed Zamani},
@@ -111,6 +114,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     - `year`
   * Not to include: `eprint`, `primaryClass`, `url`
   * Example
+
   ```
   @article{Balog:2020:arXiv,
     author    = {Krisztian Balog and Lucie Flekova and Matthias Hagen and Rosie Jones and Martin Potthast and Filip Radlinski and Mark Sanderson and Svitlana Vakulenko and Hamed Zamani},
@@ -134,6 +138,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     - `volume`
   * Not to include: `address`, `doi`, `isbn`, `url`, etc.
   * Example
+
   ```
   @book{Balog:2018:Book,
     author = {Krisztian Balog},
@@ -154,6 +159,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
     - `year`
   * Not to include: `address`, `doi`, `isbn`, `url`, etc.
   * Example
+
   ```
   @phdthesis{Maxwell:2019:PhDThesis,
     author = {Maxwell, David Martin},
@@ -167,6 +173,7 @@ Depending on the paper style, arXiv papers may need different type and metadata 
 
   * Add a BibTeX entry when citing documentation; if you just need to include an URL of a website/code/dataset, use a footnote instead (if there is an associated paper, then cite that one as well, in addition to the footnote).
   * Example
+
   ```
   @misc{Rasa:2022:doc,
     author = {Rasa Technologies Inc.},
