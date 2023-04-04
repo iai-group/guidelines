@@ -16,6 +16,13 @@
             "source.organizeImports": true
         }
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "markdownlint.config": {
+        "MD004": { "style": "sublist" },
+        "MD007": { "start_indented": true }
+    },
     "autoDocstring.customTemplatePath": "path/to/file/google.mustache",
     "pythonTestExplorer.testFramework": "pytest",
     "githubIssues.queries": [
