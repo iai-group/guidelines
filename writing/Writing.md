@@ -29,6 +29,7 @@
     - `web page`, `web site`, `web search`, BUT, `World Wide Web`, `Web 2.0`
   * Chapter, section, table and figure references are always capitalized: `Chapter X`, `Section X`, `Table X`, `Figure X.Y`, BUT `this chapter,` `this section`.
   * Cross-references should be written in full when they stand at the beginning of a sentence (`Chapter X`, `Section X`, `Figure X`, etc.), otherwise abbreviated: `Chap./Chaps.`, `Sect./Sects.`, `Fig./Figs.`, `p./pp.`, `Eq./Eqs.`
+  * `a.k.a.` (and _not_ `aka`)
 
 
 ## Punctuation and spacing
