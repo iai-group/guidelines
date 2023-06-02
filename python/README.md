@@ -34,20 +34,20 @@ You are strongly encouraged to use [VSCode](https://code.visualstudio.com/) as I
     - In case of the arguments with a description longer than one line in `Args:`, indent the following lines with 2 spaces.
   * Comments:
     - Either before the operation or on the same line.
-      - Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
+      + Comments on the same line should start at least 2 spaces away from the code with the comment character #, followed by at least one space before the text of the comment itself.
     - Comments should be as readable as narrative text, with proper capitalization and punctuation.
   * Imports:
     - Always at the top of the file, just after any module comments and docstrings and before module globals and constants.
     - Use `from <module> import <name>` for importing a single object or `import <module>` for importing a module.
-      - Do not use `from <module> import *`.
+      + Do not use `from <module> import *`.
     - Imports should be grouped from most generic to least generic:
-      - Standard library imports.
-      - Related third party imports.
-      - Local application/library specific imports.
-      - A blank line between each group of imports.
-      - Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
+      + Standard library imports.
+      + Related third party imports.
+      + Local application/library specific imports.
+      + A blank line between each group of imports.
+      + Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.
     - Avoid relative imports and use the full package name.
-      - The only exception is when importing inside `__init__.py` files. In this case, we use relative imports from the same module. This simplifies the long paths when importing to other modules.
+      + The only exception is when importing inside `__init__.py` files. In this case, we use relative imports from the same module. This simplifies the long paths when importing to other modules.
 
 ## Amendments to the Google style guide
 
@@ -66,7 +66,7 @@ The following steps are to be performed when setting up a new code repository.
 
 Create a `requirements.txt` file which includes the following packages:
 
-```
+```txt
 black
 flake8
 pytest
@@ -127,7 +127,7 @@ pydocstyle>=6.1.1
 
 ### Virtual environments with anaconda
 
-  * Simplest way to start using virtual environments in anaconda is with command `conda create --name myenv` where `myenv` is the name of the environment we want to create.
+  * The simplest way to start using virtual environments in anaconda is with command `conda create --name myenv` where `myenv` is the name of the environment we want to create.
 
   * After creating the environment, we can activate it with `conda activate myenv` and deactivate with `conda deactivate`.
 
@@ -146,14 +146,14 @@ pydocstyle>=6.1.1
     - The flag `-y` automatically answers `y` to the `Proceed ([y]/n)?` prompt.
 
   * Alternative 1
-    * Create conda environment containing only python and pip and activate it
+    - Create conda environment containing only python and pip and activate it
 
     ```shell
     conda create -n myenv python=3.9 pip@
     conda activate myenv
     ```
 
-    * Install all other dependencies using pip
+    - Install all other dependencies using pip
 
     ```shell
     python -m pip install -r requirements.txt
@@ -171,7 +171,7 @@ pydocstyle>=6.1.1
     ```
 
   * Alternative 2
-    * create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
+    - create a new environment from a `.yaml` file. This file is similar to `requirements.txt` but allows for more options to be specified.
 
       ```shell
       conda env create -n myenv --file environment.yaml

@@ -13,14 +13,14 @@
 
 ## Lists
 
-  * Top-level lists are marked by `*`, second, third, etc. levels below are marked by `-`. 
-  * Indent items with 2 spaces.
+  * Top-level lists are marked by `*`, the second is marked by `-`, third and all levels below are marked by `+`.
+  * Indent items, including the top level, with 2 spaces.
 
-```
+```Markdown
   * List item 1
   * List item 2
     - Sub item 21
-      - Sub item 211
+      + Sub item 211
     - Sub item 22
   * List item 3
 ```
