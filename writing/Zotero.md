@@ -6,7 +6,7 @@
     - Download the [latest release](https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.63)
     - In Zotero, go to Tools > Add-ons > Install Add-on From File… and select the downloaded file.
 
-    - [Here](resources/zotero-config.json) is a configuration file that can be imported into Zotero to set up the correct citation style and export options.
+    - [Here](resources/zotero-config.json) is a configuration file that can be imported into Better bibtex add-on in Zotero (zotero -> settings -> Better bibtex -> import) to set up the correct citation style and export options.
   <!-- make a quote -->
     - Group sharing:
       + We use Zotero groups to manage our references. A new group is created for each project. The group is shared with all the members of the project.
