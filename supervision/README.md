@@ -27,7 +27,7 @@ During different periods, some activities will be more pronounced than others (e
 
 ### Agenda and notes
 
-  * At the beginning of the semester, set up a Google document for keeping notes, by instantiating [this template](https://docs.google.com/document/d/1rXrqKV7CYZxWgo4pQ6a7bW9CB78yH-Xf1vTLBJiDFUE/edit?usp=sharing) and sharing it with your supervisor(s).
+  * At the beginning of the semester, set up a Google document for keeping notes, by instantiating [this template](https://docs.google.com/document/d/1rXrqKV7CYZxWgo4pQ6a7bW9CB78yH-Xf1vTLBJiDFUE/edit?usp=sharing) and sharing it with your supervisor(s). (If your supervisor has already set this up for you, then just use the document that's been shared with you.)
   * Prepare an agenda for the meeting. It ensures that the meeting has a clear purpose.
     - If you don't have an agenda at the beginning of the meeting, then the meeting is over.
     - Failing to prepare an agenda more than three times during the semester essentially means cancelling those meetings and thus amounts to your resignation from the project.
