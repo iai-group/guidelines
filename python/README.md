@@ -4,7 +4,7 @@ Keep in mind that **сode is read more often than it is written**.
 
 We follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).  This document highlights a number of peculiarities to pay special attention to, and potentially complements the Google style guide on issues not specified there.
 
-**Unless stated otherwise, we assume Python 3.9.**
+**Unless stated otherwise, we assume Python 3.11.**
 
 Linting is the automatic process of checking for programmatic and stylistic errors.  We use [Flake8](http://flake8.pycqa.org/en/latest/), which is a great toolkit for checking against coding style (PEP8), programming errors (such as "library imported but unused" and "Undefined name") and to check cyclomatic complexity (which is a measure of the number of independent paths through the source code).  Flake8 essentially wraps pep8, pyflakes, and Ned Batchelder's McCabe script.  
 
